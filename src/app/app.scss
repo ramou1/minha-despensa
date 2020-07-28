@@ -23,6 +23,13 @@ ion-icon {
     font-family: "Ionicons" !important;
 }
 
+.center {
+    width: 65% !important;
+    text-align: center;
+    margin: auto;
+    display: block;
+}
+
 // estilizando o spinner de carregamento
 .loading-md .loading-wrapper {
     background: transparent !important;
