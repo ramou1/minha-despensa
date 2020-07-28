@@ -1,0 +1,41 @@
+<ion-content padding class="vertical-align-content">
+
+  <ion-list style="margin-top: 6.3vh">
+
+    <img src="../assets/imgs/logo_piagro.png" style="width: 85% !important;" class="center">
+    <h1>Login</h1>
+
+    <form>
+      <ion-item>
+        <ion-label floating>E-mail</ion-label>
+        <ion-input type="text" name="login" required [(ngModel)]="user.email"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Senha</ion-label>
+        <ion-input type="password" name="senha" minlength="3" required [(ngModel)]="user.senha"></ion-input>
+      </ion-item>
+
+      <div text-center>
+        <button ion-button secondary class="style-button" (click)="fazerLogin()" full>Login</button>
+        <!-- <button ion-button secondary class="style-button" (click)="fazerLogin()" full [disabled]="user.email < 5 || user.senha.length < 3">Login</button> -->
+      </div>
+
+      <!-- <div text-center>
+        <button ion-button secondary class="style-button cancelButton" (click)="assinar()" full>Assinar</button>
+      </div>
+
+      <div text-center>
+        <button ion-button secondary class="style-button cancelButton" (click)="verDemo()" full>Ver Demo</button>
+      </div> -->
+
+
+    </form>
+
+  </ion-list>
+
+</ion-content>
+
+<ion-footer>
+  <button ion-button color="primary" (click)="cadastrar()" clear full>Cadastre-se</button>
+</ion-footer>
