@@ -1,3 +1,32 @@
 page-cadastro {
 
+    .back-button-md {
+        display: none !important;
+    }
+
+    // tirar espaço desnecessário acima do formulário
+    .scroll-content {
+        margin-top: 60px !important;
+    }
+
+    .item-input .label-md {
+        font-weight: 600;
+        color: #000;
+    }    
+
+    .cancelar {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #000;
+        background: #fafafaba;
+        border: 2px solid #000;
+        width: 40px;
+        height: 40px;
+        box-shadow: 0 0 0 0, 0 0 0;
+    }
+
+    .list-md .item-block .item-inner {
+        border-bottom: 1px solid #000 !important;
+    }
+
 }

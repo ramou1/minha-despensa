@@ -22,3 +22,20 @@
 ion-icon {
     font-family: "Ionicons" !important;
 }
+
+// estilizando o spinner de carregamento
+.loading-md .loading-wrapper {
+    background: transparent !important;
+    box-shadow: 0 0 0 !important;
+    transform: scale(1.2);
+}
+
+// estilizando os botões do app
+.style-button {
+    background-image: linear-gradient(to right, map-get($colors, primary) , map-get($colors, secondary));
+    // color: #000 !important;
+    border-radius: 25px;
+    padding: 25px !important;
+    font-weight: 700;
+    margin-top: 30px;
+}
