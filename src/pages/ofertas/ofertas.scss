@@ -1,0 +1,146 @@
+page-ofertas {
+
+    .titulo {
+        font-size: 1.7rem;
+        color: #222;
+        font-weight: 800;
+    }
+
+    .card-menor {
+        margin: 10px 0px;
+        width: calc(100% - 5px);
+        min-height: 19vh;
+    }
+
+    .solicitar {
+        font-size: 1rem;
+        padding-right: 1.5rem;
+        text-align: right;
+        color: #222;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+
+    .descricao {
+        font-size: 1.2rem;
+        text-align: left !important;
+        line-height: 1.5;
+        color: #222;
+    }
+
+    // estilizando ofertas semegrão
+
+    .titulo_oferta {
+        font-size: 1.7rem;
+        font-weight: 800;
+    }
+
+    .subtitulo_oferta {
+        font-size: 1rem;
+        padding-right: 2.5rem;
+        text-align: right;
+        color: map-get($colors, primary);
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    .texto_oferta {
+        text-align: left;
+        font-weight: 500;
+        font-size: 2.2rem;
+        
+
+        .descricao {
+            padding-left: 1rem;
+            font-size: 1rem; 
+            font-weight: 400;
+            color: #fff;
+        }
+    }
+
+    .descricao_emprestimo {
+        font-size: 1.5rem; 
+        text-align: left;
+        font-weight: 400;
+        color: #fff;
+    }
+
+    .card_oferta {
+        line-height: 0 !important;
+    }
+
+    hr {
+        max-width: 88px;
+        margin: 6px 0;
+        background-color: map-get($colors, primary) !important;
+        height: 1.3px;
+    }
+
+    .chat_oferta {
+        font-size: 1.2rem;
+        padding-right: 1rem;
+        text-align: right;
+        color: map-get($colors, primary);
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    // ------------------------------------------------ //
+
+    ion-card-header {
+        padding-bottom: 0 !important;
+    }
+
+    .card-content-md {
+        line-height: 2.5;
+    }
+
+    .segment-md .segment-button.segment-activated {
+        font-weight: 700;
+        border-bottom-width: 1.4px;
+    }
+
+    //linha debaixo da tab
+    .segment-md .segment-button {
+        color: #000;
+        margin: 0 25px;
+        height: 3.3rem;
+        border-bottom-width: 1px;
+        border-bottom-color: rgba(0, 0, 0, 0);
+    }
+
+
+    //estilizando os cards do Meus Pedidos
+    .titulo_pedidos, .chat_pedidos {
+        font-size: 1.2rem;
+        color: map-get($colors, primary);
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    .subtitulo_pedidos {
+        font-size: 1.3rem;
+        color: #222;
+        font-weight: 400;
+        text-transform: uppercase;
+        margin-top: 2rem;
+    }
+
+    .texto_pedidos {
+        font-size: 2rem;
+        color: #222;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+
+    // posicionando bullets abaixo dos cards
+    .swiper-container-horizontal > .swiper-pagination-bullets {
+        bottom: 0px;
+    }
+
+    // deixando os cards maiores para os bullets ficarem abaixo
+    .swiper-wrapper {
+        margin-bottom: 20px;
+    }
+
+}

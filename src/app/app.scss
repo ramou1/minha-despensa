@@ -46,3 +46,63 @@ ion-icon {
     font-weight: 700;
     margin-top: 30px;
 }
+
+//Estilizando toast de sucesso e erro
+.errorToast {
+    .toast-wrapper {
+        background-color: map-get($colors, secondary);
+        text-align: center;
+        font-size: 1.3rem;
+        font-weight: 600;
+    }
+}
+
+.successToast {
+    .toast-wrapper {
+        background-color: map-get($colors, primary);
+        text-align: center;
+        font-size: 1.3rem;
+        font-weight: 600;
+    }
+}
+
+// estilizando o alert
+.alert-md .alert-title {
+    font-size: 1.7rem;
+    text-align: left;
+    font-weight: 600;
+}
+
+// aumentando o tamanho do popup
+.alert-wrapper {
+    min-width: 280px !important;
+}
+
+// antes estava wrap-reverse e o cancelar aparecia antes
+.alert-md .alert-button-group {
+    flex-wrap: wrap;
+}
+
+// alinhando o texto do alert no centro
+.alert-md .alert-button {
+    width: 100%;
+    margin: 8px;
+    color: #fff;
+    background-image: linear-gradient(to right, map-get($colors, primary), map-get($colors, secondary));
+    text-transform: inherit;
+    font-weight: 600;
+    border-radius: 20px;   
+}
+
+//classe do botão de cancelar com design diferente
+.cancelButton {
+    background-image: -webkit-gradient(linear, left top, right top, from(#F2EFEF), to(#F2EFEF)) !important;
+    color: map-get($colors, primary) !important;
+    border: 1px solid map-get($colors, primary);
+    font-weight: 500 !important;
+    margin-top: 15px !important;
+}
+
+.alert-md .alert-button .button-inner {
+    justify-content: center;
+}

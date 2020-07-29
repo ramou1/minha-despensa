@@ -2,10 +2,6 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
-
-import { AboutPage } from '../pages/about/about';
-import { ContactPage } from '../pages/contact/contact';
-import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -15,13 +11,16 @@ import { UtilsProvider } from '../providers/utils/utils';
 import { LoginPage } from '../pages/login/login';
 import { CadastroPage } from '../pages/cadastro/cadastro';
 import { HttpClientModule } from '@angular/common/http';
+import { ListaDeComprasPage } from '../pages/lista-de-compras/lista-de-compras';
+import { OndeTemPage } from '../pages/onde-tem/onde-tem';
+import { OfertasPage } from '../pages/ofertas/ofertas';
 
 @NgModule({
   declarations: [
     MyApp,
-    AboutPage,
-    ContactPage,
-    HomePage,
+    ListaDeComprasPage,
+    OndeTemPage,
+    OfertasPage,
     LoginPage,
     CadastroPage,
     TabsPage
@@ -34,9 +33,9 @@ import { HttpClientModule } from '@angular/common/http';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    AboutPage,
-    ContactPage,
-    HomePage,
+    ListaDeComprasPage,
+    OndeTemPage,
+    OfertasPage,
     LoginPage,
     CadastroPage,
     TabsPage

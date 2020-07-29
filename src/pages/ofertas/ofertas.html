@@ -1,0 +1,116 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Ofertas</ion-title>
+  </ion-navbar>
+
+  <ion-toolbar no-border-top>
+    <ion-segment [(ngModel)]="escolha">
+      <ion-segment-button value="promocoes">
+        Promoções
+      </ion-segment-button>
+      <ion-segment-button value="favoritadas">
+        Favoritadas
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <div [ngSwitch]="escolha">
+
+    <ion-list no-border *ngSwitchCase="'promocoes'" no-lines>
+      <ion-slides pager>
+
+        <ion-slide *ngFor="let oferta of ofertas; i as index;">
+          <ion-card>
+            <ion-card-header>
+              <h2 class="titulo_pedidos"> {{oferta.estabelecimento ? oferta.estabelecimento : '---' }} - {{oferta.distancia}} km</h2>
+            </ion-card-header>
+
+            <ion-card-content>
+
+              <img src="../assets/imgs/{{oferta.imagem ? oferta.imagem : '../assets/imgs/default-product.png'}}" class="center">
+
+              <h2 class="subtitulo_pedidos" style="margin-top: 2rem;"> PRODUTO </h2>
+              <h2 class="texto_pedidos"> {{oferta.produto ? oferta.produto : '---' }} </h2>
+
+              <h2 class="subtitulo_pedidos"> VALOR </h2>
+              <h2 class="texto_pedidos" *ngIf="oferta.valor"> {{oferta.valor | currency:'BRL'}} </h2>
+              <h2 class="texto_pedidos" *ngIf="!oferta.valor"> --- </h2>
+
+              <h2 class="subtitulo_pedidos"> DATA DE VALIDADE </h2>
+              <h2 class="texto_pedidos" style="margin-bottom: 20px;">
+                {{oferta.valido_ate | date: 'dd/MM/yyyy' }}</h2>
+
+            </ion-card-content>
+
+            <ion-row class="cardfooter">
+              <ion-col col-2>
+                <ion-icon name="{{icone_padrao}}" (click)="favoritarOferta(oferta)"></ion-icon>
+                <!-- <img src="../assets/imgs/delet.svg" (click)="desfavoritar(oferta)"> -->
+              </ion-col>
+              <ion-col col-8 text-center>
+                <p>{{oferta.estado}}</p>
+              </ion-col>
+              <ion-col col-2>
+                <!-- <p class="chat_pedidos" (click)="abrirChat(oferta)">CHAT</p> -->
+              </ion-col>
+            </ion-row>
+
+          </ion-card>
+        </ion-slide>
+
+      </ion-slides>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'favoritadas'" no-lines>
+
+      <ion-slides pager>
+
+        <ion-slide *ngFor="let oferta of ofertas_favoritadas; i as index;">
+          <ion-card>
+            <ion-card-header>
+              <h2 class="titulo_pedidos"> {{oferta.estabelecimento ? oferta.estabelecimento : '---' }} - {{oferta.distancia}} km</h2>
+            </ion-card-header>
+
+            <ion-card-content>
+
+              <img src="../assets/imgs/{{oferta.imagem ? oferta.imagem : '../assets/imgs/default-product.png'}}" class="center">
+
+              <h2 class="subtitulo_pedidos" style="margin-top: 2rem;"> PRODUTO </h2>
+              <h2 class="texto_pedidos"> {{oferta.produto ? oferta.produto : '---' }} </h2>
+
+              <h2 class="subtitulo_pedidos"> VALOR </h2>
+              <h2 class="texto_pedidos" *ngIf="oferta.valor"> {{oferta.valor | currency:'BRL'}} </h2>
+              <h2 class="texto_pedidos" *ngIf="!oferta.valor"> --- </h2>
+
+              <h2 class="subtitulo_pedidos"> DATA DE VALIDADE </h2>
+              <h2 class="texto_pedidos" style="margin-bottom: 20px;">
+                {{oferta.valido_ate | date: 'dd/MM/yyyy' }}</h2>
+
+            </ion-card-content>
+
+            <ion-row class="cardfooter">
+              <ion-col col-2>
+                <ion-icon name="star" (click)="desfavoritarOferta(oferta)"></ion-icon>
+                <!-- <img src="../assets/imgs/delet.svg" (click)="desfavoritar(oferta)"> -->
+              </ion-col>
+              <ion-col col-8 text-center>
+                <p>{{oferta.estado}}</p>
+              </ion-col>
+              <ion-col col-2>
+                <!-- <p class="chat_pedidos" (click)="abrirChat(oferta)">CHAT</p> -->
+              </ion-col>
+            </ion-row>
+
+          </ion-card>
+        </ion-slide>
+
+      </ion-slides>
+
+    </ion-list>
+
+  </div>
+
+</ion-content>
