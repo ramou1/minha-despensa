@@ -38,7 +38,7 @@ export class ApiProvider {
     return url;
   }
 
-  public itens_nota: any = [
+  public lista: any = [
     { id_nota: 4, nome_produto: "Semente de Soja BMX Potência RR - Terceiros", qtd: 300, unity: "kg", valor_unitario: 3.4 },
     { id_nota: 8, nome_produto: "Semente de Soja BMX Potência RR - Terceiros", qtd: 300, unity: "kg", valor_unitario: 3.4 },
     { id_nota: 8, nome_produto: "GLI-UP 720 WG C/05 kg", qtd: 300, unity: "kg", valor_unitario: 3.4 },

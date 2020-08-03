@@ -1,15 +1,54 @@
-<!--
-  Generated template for the ListaDeComprasPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
   <ion-navbar>
-    <ion-title>lista-de-compras</ion-title>
+    <ion-title>
+      Estoque
+    </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
+
+  <ion-card *ngFor="let lista of listas">
+    <ion-card-header>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-7>
+            <div>{{lista.produto}}</div>
+          </ion-col>
+          <ion-col col-5 class="estoquista" text-wrap>
+            <span>{{lista.armazem}}</span>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+    </ion-card-header>
+
+    <ion-card-content text-center>
+      <span class="qtd">{{lista.data | number}}</span> <span
+        class="unidade">{{lista.unidade ? lista.unidade : 'não definido'}}</span>
+    </ion-card-content>
+
+    <ion-row class="cardfooter">
+      <ion-col>
+
+      </ion-col>
+      <ion-col text-center>
+        <p class="lancamentos" (click)="abrirLancamentos(lista)">Lançamentos</p>
+      </ion-col>
+      <ion-col>
+        <img src="../assets/imgs/edit.svg" style="width: auto; float: right;" (click)="editarLista(lista)">
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
+  <div style="margin-bottom: 70px;"></div>
+
+  <!-- <img src="../assets/imgs/add.svg" style="padding: 30px 0;" class="novo-estoque" (click)="addLista()"> -->
+
+  <ion-fab bottom right>
+    <button ion-fab clear (click)="addLista()" class="style-fab-button">
+      <ion-icon color="dark" name="md-add"></ion-icon>
+    </button>
+  </ion-fab>
 
 </ion-content>

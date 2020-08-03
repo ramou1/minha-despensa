@@ -14,11 +14,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { ListaDeComprasPage } from '../pages/lista-de-compras/lista-de-compras';
 import { OndeTemPage } from '../pages/onde-tem/onde-tem';
 import { OfertasPage } from '../pages/ofertas/ofertas';
+import { NovaListaPage } from '../pages/nova-lista/nova-lista';
+import { EditListaPage } from '../pages/edit-lista/edit-lista';
 
 @NgModule({
   declarations: [
     MyApp,
     ListaDeComprasPage,
+    NovaListaPage,
+    EditListaPage,
     OndeTemPage,
     OfertasPage,
     LoginPage,
@@ -34,6 +38,8 @@ import { OfertasPage } from '../pages/ofertas/ofertas';
   entryComponents: [
     MyApp,
     ListaDeComprasPage,
+    NovaListaPage,
+    EditListaPage,
     OndeTemPage,
     OfertasPage,
     LoginPage,
