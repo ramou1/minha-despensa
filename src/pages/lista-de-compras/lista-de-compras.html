@@ -16,7 +16,7 @@
             <div>{{lista.produto}}</div>
           </ion-col>
           <ion-col col-5 class="estoquista" text-wrap>
-            <span>{{lista.armazem}}</span> 
+            <span>{{lista.data | date: 'dd/MM/yyyy'}}</span> 
           </ion-col>
         </ion-row>
       </ion-grid>
@@ -33,7 +33,7 @@
 
       </ion-col>
       <ion-col text-center>
-        <p class="lancamentos" (click)="abrirLista(lista)">Lançamentos</p>
+        <p class="abrir-lista" (click)="abrirLista(lista)">Abrir Lista</p>
       </ion-col>
       <ion-col>
         <img src="../assets/imgs/edit.svg" style="width: auto; float: right;" (click)="editarLista(lista)">

@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Novo Produto</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-fab top right>
+  <button ion-fab clear (click)=cancelar() class="style-fab-button">
+    <ion-icon color="dark" name="md-close"></ion-icon>
+  </button>
+</ion-fab>
+
+<ion-content padding>
+
+  <h2 class="title-estoque">Novo Estoque</h2>
+  <h2 class="title-pontos">...</h2> 
+
+  <ion-list inset>
+
+    <ion-item>
+      <ion-label stacked>Produto</ion-label>
+      <ion-select [(ngModel)]="produto.nome" submitText="Selecionar" cancelText="Cancelar" class="input-estoque">
+        <ion-option *ngFor="let produto of produtos" value="{{produto.nome}}" (ionSelect)="produtoEscolhido(produto)">
+          {{produto.nome}}</ion-option>
+      </ion-select>
+
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Unidade de Medida</ion-label>
+      <ion-select [(ngModel)]="produto.medida" submitText="Selecionar" cancelText="Cancelar" class="input-estoque">
+        <ion-option *ngFor="let medida of medidas" value="{{medida.nome}}" (ionSelect)="medidaEscolhida(medida)">
+          {{medida.nome}}</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Qtde. Inicial do Estoque</ion-label>
+      <ion-input type="number" [(ngModel)]="produto.qtd" required class="input-estoque"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Estoquista</ion-label>
+      <ion-select [(ngModel)]="produto.estoquista" submitText="Selecionar" cancelText="Cancelar" class="input-estoque">
+        <ion-option *ngFor="let estoquista of estoquistas" value="{{estoquista.nome}}" (ionSelect)="estoquistaEscolhido(estoquista)">
+          {{estoquista.nome}}</ion-option>
+      </ion-select>
+    </ion-item>
+
+  </ion-list>
+
+  <div text-center>
+    <button ion-button secondary class="style-button" (click)="salvar()" full [disabled]="disableButton || produto.nome.length < 2 || produto.qtd.length < 1">Salvar</button>
+  </div>
+
+</ion-content>

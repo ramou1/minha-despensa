@@ -16,6 +16,8 @@ import { OndeTemPage } from '../pages/onde-tem/onde-tem';
 import { OfertasPage } from '../pages/ofertas/ofertas';
 import { NovaListaPage } from '../pages/nova-lista/nova-lista';
 import { EditListaPage } from '../pages/edit-lista/edit-lista';
+import { DetalheListaPage } from '../pages/detalhe-lista/detalhe-lista';
+import { NovoProdutoPage } from '../pages/novo-produto/novo-produto';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { EditListaPage } from '../pages/edit-lista/edit-lista';
     ListaDeComprasPage,
     NovaListaPage,
     EditListaPage,
+    DetalheListaPage,
+    NovoProdutoPage,
     OndeTemPage,
     OfertasPage,
     LoginPage,
@@ -40,6 +44,8 @@ import { EditListaPage } from '../pages/edit-lista/edit-lista';
     ListaDeComprasPage,
     NovaListaPage,
     EditListaPage,
+    DetalheListaPage,
+    NovoProdutoPage,
     OndeTemPage,
     OfertasPage,
     LoginPage,
