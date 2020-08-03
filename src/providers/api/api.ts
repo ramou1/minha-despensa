@@ -39,11 +39,11 @@ export class ApiProvider {
   }
 
   public lista: any = [
-    { id_nota: 4, nome_produto: "Semente de Soja BMX Potência RR - Terceiros", qtd: 300, unity: "kg", valor_unitario: 3.4 },
-    { id_nota: 8, nome_produto: "Semente de Soja BMX Potência RR - Terceiros", qtd: 300, unity: "kg", valor_unitario: 3.4 },
-    { id_nota: 8, nome_produto: "GLI-UP 720 WG C/05 kg", qtd: 300, unity: "kg", valor_unitario: 3.4 },
-    { id_nota: 8, nome_produto: "Soja Integrada", qtd: 300, unity: "kg", valor_unitario: 3.4 },
-    { id_nota: 8, nome_produto: "Comp. Preço Milho - Insutria", qtd: 300, unity: "kg", valor_unitario: 3.4 }
+    { id_lista: 4, descricao: "", data: "2020-05-22T00:00:00.000Z", produtos: [ {nome_produto: "Semente Soja", valor_unitario: 3.4}, {nome_produto: "Semente Soja", valor_unitario: 3.4}, {nome_produto: "Semente Soja", valor_unitario: 3.4}, {} ]  },
+    { id_lista: 8, descricao: "", data: "2020-06-27T00:00:00.000Z", produtos: [ {nome_produto: "Semente Soja", valor_unitario: 3.4}, {nome_produto: "Semente Soja", valor_unitario: 3.4}, {nome_produto: "Semente Soja", valor_unitario: 3.4}, {} ]  },
+    { id_lista: 8, descricao: "", data: "2020-07-23T00:00:00.000Z", produtos: [ {nome_produto: "GLI 720", valor_unitario: 3.4}, {nome_produto: "Semente Soja", valor_unitario: 3.4}, {nome_produto: "Semente Soja", valor_unitario: 3.4}, {} ]  },
+    { id_lista: 8, descricao: "", data: "2020-08-12T00:00:00.000Z", produtos: [ {nome_produto: "Soja Integrada", valor_unitario: 3.4}, {nome_produto: "Semente Soja", valor_unitario: 3.4}, {nome_produto: "Semente Soja", valor_unitario: 3.4}, {} ]  },
+    { id_lista: 8, descricao: "", data: "2020-09-20T00:00:00.000Z", produtos: [ {nome_produto: "Preço Milho", valor_unitario: 3.4}, {nome_produto: "Semente Soja", valor_unitario: 3.4}, {nome_produto: "Semente Soja", valor_unitario: 3.4}, {} ]  }
   ]
 
   public produtos_gastos: any = {

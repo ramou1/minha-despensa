@@ -16,7 +16,7 @@
             <div>{{lista.produto}}</div>
           </ion-col>
           <ion-col col-5 class="estoquista" text-wrap>
-            <span>{{lista.armazem}}</span>
+            <span>{{lista.armazem}}</span> 
           </ion-col>
         </ion-row>
       </ion-grid>
@@ -25,7 +25,7 @@
 
     <ion-card-content text-center>
       <span class="qtd">{{lista.data | number}}</span> <span
-        class="unidade">{{lista.unidade ? lista.unidade : 'não definido'}}</span>
+        class="unidade">{{lista.unidade ? lista.unidade : 'não definido'}} produtos</span>
     </ion-card-content>
 
     <ion-row class="cardfooter">
@@ -33,7 +33,7 @@
 
       </ion-col>
       <ion-col text-center>
-        <p class="lancamentos" (click)="abrirLancamentos(lista)">Lançamentos</p>
+        <p class="lancamentos" (click)="abrirLista(lista)">Lançamentos</p>
       </ion-col>
       <ion-col>
         <img src="../assets/imgs/edit.svg" style="width: auto; float: right;" (click)="editarLista(lista)">

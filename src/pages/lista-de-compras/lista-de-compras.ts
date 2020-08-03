@@ -70,7 +70,7 @@ export class ListaDeComprasPage {
     // });
   }
 
-  abrirLancamentos(lista) {
+  abrirLISTA(lista) {
     this.navCtrl.push(DetalheListaPage, {
       lista: lista
     });
