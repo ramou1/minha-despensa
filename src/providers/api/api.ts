@@ -39,11 +39,11 @@ export class ApiProvider {
   }
 
   public lista: any = [
-    { id_lista: 4, descricao: "", data: "2020-05-22T00:00:00.000Z", produtos: [ {nome_produto: "Semente Soja", valor_unitario: 3.4}, {nome_produto: "Semente Soja", valor_unitario: 3.4}, {nome_produto: "Semente Soja", valor_unitario: 3.4}, {} ]  },
-    { id_lista: 8, descricao: "", data: "2020-06-27T00:00:00.000Z", produtos: [ {nome_produto: "Semente Soja", valor_unitario: 3.4}, {nome_produto: "Semente Soja", valor_unitario: 3.4}, {nome_produto: "Semente Soja", valor_unitario: 3.4}, {} ]  },
-    { id_lista: 8, descricao: "", data: "2020-07-23T00:00:00.000Z", produtos: [ {nome_produto: "GLI 720", valor_unitario: 3.4}, {nome_produto: "Semente Soja", valor_unitario: 3.4}, {nome_produto: "Semente Soja", valor_unitario: 3.4}, {} ]  },
-    { id_lista: 8, descricao: "", data: "2020-08-12T00:00:00.000Z", produtos: [ {nome_produto: "Soja Integrada", valor_unitario: 3.4}, {nome_produto: "Semente Soja", valor_unitario: 3.4}, {nome_produto: "Semente Soja", valor_unitario: 3.4}, {} ]  },
-    { id_lista: 8, descricao: "", data: "2020-09-20T00:00:00.000Z", produtos: [ {nome_produto: "Preço Milho", valor_unitario: 3.4}, {nome_produto: "Semente Soja", valor_unitario: 3.4}, {nome_produto: "Semente Soja", valor_unitario: 3.4}, {} ]  }
+    { id_lista: 4, descricao: "", data: "2020-05-22", produtos: [ {nome_produto: "Semente Soja", valor_unitario: 3.4}, {nome_produto: "Semente Soja", valor_unitario: 3.4}, {nome_produto: "Semente Soja", valor_unitario: 3.4}, {} ]  },
+    { id_lista: 8, descricao: "", data: "2020-06-27", produtos: [ {nome_produto: "Semente Soja", valor_unitario: 3.4}, {nome_produto: "Semente Soja", valor_unitario: 3.4}, {nome_produto: "Semente Soja", valor_unitario: 3.4}, {} ]  },
+    { id_lista: 8, descricao: "", data: "2020-07-23", produtos: [ {nome_produto: "GLI 720", valor_unitario: 3.4}, {nome_produto: "Semente Soja", valor_unitario: 3.4}, {nome_produto: "Semente Soja", valor_unitario: 3.4}, {} ]  },
+    { id_lista: 8, descricao: "", data: "2020-08-12", produtos: [ {nome_produto: "Soja Integrada", valor_unitario: 3.4}, {nome_produto: "Semente Soja", valor_unitario: 3.4}, {nome_produto: "Semente Soja", valor_unitario: 3.4}, {} ]  },
+    { id_lista: 8, descricao: "", data: "2020-09-20", produtos: [ {nome_produto: "Preço Milho", valor_unitario: 3.4}, {nome_produto: "Semente Soja", valor_unitario: 3.4}, {nome_produto: "Semente Soja", valor_unitario: 3.4}, {} ]  }
   ]
 
   public produtos_gastos: any = {

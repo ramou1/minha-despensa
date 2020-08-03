@@ -34,6 +34,8 @@ export class ListaDeComprasPage {
   }
 
   loadData() {
+    console.log("Listas de compras: ", this.listas); 
+
     // this.loading = this.loadingCtrl.create({
     //   // content: 'Carregando Estoque...',
     // });
