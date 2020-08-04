@@ -23,7 +23,7 @@ export class NovoProdutoPage {
   // produtos: any =  this.api.produtos; // mockado
   produtos: any;
   estoquistas: any;
-  produto: any = { nome: '', medida: '', qtd: '', estoquista: '', cliente: '' };
+  produto: any = { id: '', nome: '', qtd: '', valor: '' };
   medidas: any;
   loading: Loading;
   disableButton: boolean = false;
@@ -38,15 +38,6 @@ export class NovoProdutoPage {
 
 
   loadData() {
-    // this.api.getMedidas().then((res: any) => {
-    //   this.medidas = res;
-    //   this.produto.medida = this.medidas[0].nome;
-    //   this.idmedida = this.medidas[0].idTipo;
-    //   console.log("Medidas: ", this.medidas);
-    // }).catch((e) => {
-    //   console.log("Não foi possível listar as medidas. Detalhes: " + e);
-    // });
-
     // this.api.getTiposProdutos().then((res: any) => {
     //   this.produtos = res;
     //   this.produto.nome = this.produtos[0].nome;
@@ -73,17 +64,6 @@ export class NovoProdutoPage {
     this.idproduto = produto.idproduto;
   }
 
-  medidaEscolhida(medida) {
-    console.log("medida escolhida: ", medida);
-    this.idmedida = medida.idTipo;
-  }
-
-  estoquistaEscolhido(estoquista) {
-    console.log("estoquista escolhido: ", estoquista);
-    this.idarmazem = estoquista.idarmazem;
-    this.produto.cliente = estoquista.cliente;
-  }
-
   salvar() {
     this.disableButton = true;
     // this.loading = this.loadingCtrl.create({
@@ -94,10 +74,10 @@ export class NovoProdutoPage {
 
     //   this.api.criarEstoque(this.produto.qtd, this.idarmazem, this.idproduto, this.produto.cliente, this.idmedida).then((result: any) => {
     //     this.loading.dismiss().then(() => {
-    //       this.utils.presentSuccessToast("Estoque cadastrado com sucesso!");
-    //       setTimeout(() => {
-    //         this.navCtrl.pop();
-    //       }, 2000);
+          this.utils.presentSuccessToast("Produto adicionado com sucesso!");
+          setTimeout(() => {
+            this.navCtrl.pop();
+          }, 1000);
     //     });
     //   }).catch((error: any) => {
     //     console.log("Erro ao cadastrar!", error.message);

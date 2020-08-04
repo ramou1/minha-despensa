@@ -39,9 +39,9 @@ export class ApiProvider {
   }
 
   public lista: any = [
-    { id_lista: 4, descricao: "", data: "2020-05-22", produtos: [ {nome_produto: "Semente Soja", valor_unitario: 3.4}, {nome_produto: "Semente Soja", valor_unitario: 3.4}, {nome_produto: "Semente Soja", valor_unitario: 3.4}, {} ]  },
+    { id_lista: 4, descricao: "Churrasco", data: "2020-05-22", produtos: [ {nome_produto: "Semente Soja", valor_unitario: 3.4}, {nome_produto: "Semente Soja", valor_unitario: 3.4}, {nome_produto: "Semente Soja", valor_unitario: 3.4}, {} ]  },
     { id_lista: 8, descricao: "", data: "2020-06-27", produtos: [ {nome_produto: "Semente Soja", valor_unitario: 3.4}, {nome_produto: "Semente Soja", valor_unitario: 3.4}, {nome_produto: "Semente Soja", valor_unitario: 3.4}, {} ]  },
-    { id_lista: 8, descricao: "", data: "2020-07-23", produtos: [ {nome_produto: "GLI 720", valor_unitario: 3.4}, {nome_produto: "Semente Soja", valor_unitario: 3.4}, {nome_produto: "Semente Soja", valor_unitario: 3.4}, {} ]  },
+    { id_lista: 8, descricao: "Para a mãe", data: "2020-07-23", produtos: [ {nome_produto: "GLI 720", valor_unitario: 3.4}, {nome_produto: "Semente Soja", valor_unitario: 3.4}, {nome_produto: "Semente Soja", valor_unitario: 3.4}, {} ]  },
     { id_lista: 8, descricao: "", data: "2020-08-12", produtos: [ {nome_produto: "Soja Integrada", valor_unitario: 3.4}, {nome_produto: "Semente Soja", valor_unitario: 3.4}, {nome_produto: "Semente Soja", valor_unitario: 3.4}, {} ]  },
     { id_lista: 8, descricao: "", data: "2020-09-20", produtos: [ {nome_produto: "Preço Milho", valor_unitario: 3.4}, {nome_produto: "Semente Soja", valor_unitario: 3.4}, {nome_produto: "Semente Soja", valor_unitario: 3.4}, {} ]  }
   ]
@@ -79,6 +79,14 @@ export class ApiProvider {
   public ofertas_favoritadas: any = [
       { idoferta: 2, produto: "Sabonete Dove 100g", valor: 6, estabelecimento: "Mercado Carrefour", cidade: "São José dos Campos", bairro: "Colinas", localizacao: null, distancia: 4, data_insercao: "2020-06-17T00:00:00.000Z", valido_ate: "2020-06-30T00:00:00.000Z", status: 1, imagem: null, estado: "Próxima do fim" },
       { idoferta: 9, produto: "Achocolatado Prestígio 250g", valor: 14.5, estabelecimento: "Mercado Extra", cidade: "São José dos Campos", bairro: "Jardim Oswaldo Cruz", localizacao: null, distancia: 3.7, data_insercao: "2020-06-12T00:00:00.000Z", valido_ate: "2020-06-17T00:00:00.000Z", status: 1, imagem: "default-product.png", estado: "Válida" }];
+  
+    public itens_nota: any = [
+    { id_nota: 4, nome_produto: "Semente de Soja BMX Potência RR - Terceiros", qtd: 300, unity: "kg", valor_unitario: 3.4 },
+    { id_nota: 8, nome_produto: "Semente de Soja BMX Potência RR - Terceiros", qtd: 300, unity: "kg", valor_unitario: 3.4 },
+    { id_nota: 8, nome_produto: "GLI-UP 720 WG C/05 kg", qtd: 300, unity: "kg", valor_unitario: 3.4 },
+    { id_nota: 8, nome_produto: "Soja Integrada", qtd: 300, unity: "kg", valor_unitario: 3.4 },
+    { id_nota: 8, nome_produto: "Comp. Preço Milho - Insutria", qtd: 300, unity: "kg", valor_unitario: 3.4 }
+  ]
   
     // mostrar todas as ofertas
     getOfertas() {

@@ -1,22 +1,22 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Estoque
+      Lista de Compras
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
 
-  <ion-card *ngFor="let lista of listas">
+  <ion-card *ngFor="let lista of listas" (click)="abrirLista(lista)">
     <ion-card-header>
       <ion-grid>
         <ion-row>
-          <ion-col col-7>
-            <div>{{lista.produto}}</div>
+          <ion-col col-9>
+            <div class="descricao">{{lista.descricao}}</div>
           </ion-col>
-          <ion-col col-5 class="estoquista" text-wrap>
-            <span>{{lista.data | date: 'dd/MM/yyyy'}}</span> 
+          <ion-col col-3 class="data-lista" text-wrap>
+            <span>{{lista.data | date: 'dd/MM/yy'}}</span> 
           </ion-col>
         </ion-row>
       </ion-grid>
@@ -24,18 +24,14 @@
     </ion-card-header>
 
     <ion-card-content text-center>
-      <span class="qtd">{{lista.data}}</span> <span
-        class="unidade">{{lista.unidade ? lista.unidade : 'não definido'}} produtos</span>
+      <!-- <span class="qtd">{{lista.qtd_produtos ? lista.qtd_produtos : '0'}}</span> -->
     </ion-card-content>
 
     <ion-row class="cardfooter">
-      <ion-col>
-
+      <ion-col col-10>
+        <p class=" produtos">Produto 1, produto 2, produto 3, produto 4, produto 5</p>
       </ion-col>
-      <ion-col text-center>
-        <p class="abrir-lista" (click)="abrirLista(lista)">Abrir Lista</p>
-      </ion-col>
-      <ion-col>
+      <ion-col col-2>
         <img src="../assets/imgs/edit.svg" style="width: auto; float: right;" (click)="editarLista(lista)">
       </ion-col>
     </ion-row>
