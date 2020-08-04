@@ -34,6 +34,18 @@ page-detalhe-lista {
                 color: map-get($colors, primary);
             }
         }
+
+        //Estilizando o Total
+        .total {
+            margin-top: 3vh !important;
+            .note-md {
+                font-size: 1.3rem;
+                color: #000;
+                font-weight: 800;
+                margin-bottom: 50px;
+                text-align: right;
+            }
+        }
     
         h2 {
             font-size: 2rem;

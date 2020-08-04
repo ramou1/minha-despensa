@@ -22,20 +22,18 @@
 
   <ion-list no-lines>
 
-    <div *ngFor="let nota of itens_nota; index as i">
+    <div *ngFor="let nota of notaEscolhida.produtos; index as i">
       <ion-item text-wrap>
         <ion-note item-start class="numero"> 0{{i+1}}</ion-note>
         {{nota.nome_produto}}
         <ion-note item-end class="dados"> {{nota.valor_total | currency:'BRL'}} <br> 
-          <span class="destaque">{{nota.qtd | number }} kg <br>
-          {{nota.valor_unitario | currency:'BRL'}} </span></ion-note>
+          <span class="destaque">{{nota.valor_unitario | currency:'BRL'}} </span></ion-note>
       </ion-item>
     </div>
 
     <ion-item text-wrap class="total">
       <ion-note item-start> TOTAL </ion-note>
-      <ion-note item-end> {{total | currency:'BRL'}}  <br>
-      <span class="peso"> {{peso_total | number }} KG</span> </ion-note>
+      <ion-note item-end> {{total | currency:'BRL'}} </ion-note>
     </ion-item>
 
   </ion-list>

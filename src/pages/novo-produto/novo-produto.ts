@@ -27,9 +27,7 @@ export class NovoProdutoPage {
   medidas: any;
   loading: Loading;
   disableButton: boolean = false;
-  idarmazem: any;
   idproduto: any;
-  idmedida: any;
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad NovoEstoquePage');
@@ -77,7 +75,7 @@ export class NovoProdutoPage {
           this.utils.presentSuccessToast("Produto adicionado com sucesso!");
           setTimeout(() => {
             this.navCtrl.pop();
-          }, 1000);
+          }, 1500);
     //     });
     //   }).catch((error: any) => {
     //     console.log("Erro ao cadastrar!", error.message);

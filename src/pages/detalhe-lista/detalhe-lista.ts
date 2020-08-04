@@ -56,7 +56,7 @@ export class DetalheListaPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad NotaDetalhesPage');
+    console.log('ionViewDidLoad DetalheListaPage');
     this.loadData();
   }
 
