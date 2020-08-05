@@ -6,6 +6,11 @@ page-ofertas {
         font-weight: 800;
     }
 
+    .img-product {
+        max-width: 70px;
+        margin-top: 10px;
+    }
+
     .card-menor {
         margin: 10px 0px;
         width: calc(100% - 5px);
@@ -110,15 +115,15 @@ page-ofertas {
     }
 
 
-    //estilizando os cards do Meus Pedidos
-    .titulo_pedidos, .chat_pedidos {
+    //estilizando os cards das Ofertas
+    .titulo_ofertas, .chat_ofertas {
         font-size: 1.2rem;
         color: map-get($colors, primary);
         font-weight: 600;
         text-transform: uppercase;
     }
 
-    .subtitulo_pedidos {
+    .subtitulo_ofertas {
         font-size: 1.3rem;
         color: #222;
         font-weight: 400;
@@ -126,8 +131,8 @@ page-ofertas {
         margin-top: 2rem;
     }
 
-    .texto_pedidos {
-        font-size: 2rem;
+    .texto_ofertas {
+        font-size: 1.7rem;
         color: #222;
         font-weight: 800;
         text-transform: uppercase;

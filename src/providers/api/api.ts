@@ -38,43 +38,50 @@ export class ApiProvider {
     return url;
   }
 
-  public lista: any = [
-    { id_lista: 4, descricao: "Churrasco", data: "2020-05-22", produtos: [ {nome_produto: "Semente Soja", valor_unitario: 3.4}, {nome_produto: "Semente Soja", valor_unitario: 3.4}, {nome_produto: "Semente Soja", valor_unitario: 3.4}, {} ]  },
-    { id_lista: 8, descricao: "", data: "2020-06-27", produtos: [ {nome_produto: "Semente Soja", valor_unitario: 3.4}, {nome_produto: "Semente Soja", valor_unitario: 3.4}, {nome_produto: "Semente Soja", valor_unitario: 3.4}, {} ]  },
-    { id_lista: 8, descricao: "Para a mãe", data: "2020-07-23", produtos: [ {nome_produto: "GLI 720", valor_unitario: 3.4}, {nome_produto: "Semente Soja", valor_unitario: 3.4}, {nome_produto: "Semente Soja", valor_unitario: 3.4}, {} ]  },
-    { id_lista: 8, descricao: "", data: "2020-08-12", produtos: [ {nome_produto: "Soja Integrada", valor_unitario: 3.4}, {nome_produto: "Semente Soja", valor_unitario: 3.4}, {nome_produto: "Semente Soja", valor_unitario: 3.4}, {} ]  },
-    { id_lista: 8, descricao: "", data: "2020-09-20", produtos: [ {nome_produto: "Preço Milho", valor_unitario: 3.4}, {nome_produto: "Semente Soja", valor_unitario: 3.4}, {nome_produto: "Semente Soja", valor_unitario: 3.4}, {} ]  }
+  public produtos_adicionados: any = [
+    {nome_produto: "Picanha", valor_unitario: 25.6}, 
+    {nome_produto: "Pão de Alho", valor_unitario: 3.4}, 
+    {nome_produto: "Pão francês", valor_unitario: 5.4}, 
+    {nome_produto: "Sobre coxa", valor_unitario: 15.2}
   ]
 
-  public produtos_gastos: any = {
-    iduser: 10, email: "email@gmail.com",
-    meses: [
-      {
-        id: 1,
-        mes_descricao: "Novembro",
-        ano: 2019,
-        produtos: [
-          { id: 1, data_emissao: "2020-05-17T00:00:00.000Z", categoria: "Sementes", valor_unit: 4.2, qtd: 300, unidade: "kg", descricao: "Semente de Soja RR - Terceiros", valor_total: 10200, tipo: 1, tipo_descricao: "gasto" },
-          { id: 2, data_emissao: "2020-09-26T00:00:00.000Z", categoria: "Inseticida", valor_unit: 3.2, qtd: 300, unidade: "kg", descricao: "GLI-UP 720 WG C/05 kg", valor_total: 8499, tipo: 1, tipo_descricao: "gasto" },
-          { id: 3, data_emissao: "2021-06-10T00:00:00.000Z", categoria: "Festicida", valor_unit: 3, qtd: 300, unidade: "kg", descricao: "Pesticida 8319 J&L", valor_total: 5988, tipo: 1, tipo_descricao: "gasto" }
-        ]
-      },
-      {
-        id: 2,
-        mes_descricao: "Outubro",
-        ano: 2019,
-        produtos: [
-          { id: 5, data_emissao: "2020-04-10T00:00:00.000Z", categoria: "Sementes", valor_unit: 18.2, qtd: 30, unidade: "saca", descricao: "Semente de Feijão", valor_total: 5988, tipo: 0, tipo_descricao: "gasto" },
-          { id: 6, data_emissao: "2020-08-26T00:00:00.000Z", categoria: "Inseticida", valor_unit: 2.4, qtd: 200, unidade: "kg", descricao: "LOPE 99 C/05 kg", valor_total: 2499, tipo: 0, tipo_descricao: "gasto" }
-        ]
-      }
-    ]
-  };
+  public lista: any = [
+    { id_lista: 4, descricao: "Churrasco", data: "2020-05-22", produtos: [ {nome_produto: "Coxão duro", valor_unitario: 15.6}, {nome_produto: "Pão de Alho", valor_unitario: 3.4}, {nome_produto: "Pão francês", valor_unitario: 5.4}, {nome_produto: "Sobre coxa", valor_unitario: 15.2} ]  },
+    { id_lista: 8, descricao: "", data: "2020-06-27", produtos: [ {nome_produto: "Semente Soja", valor_unitario: 10.2}, {nome_produto: "Achocolatado Toddy", valor_unitario: 8.9}, {nome_produto: "Semente Soja", valor_unitario: 10.7}, {} ]  },
+    { id_lista: 8, descricao: "Para a mãe", data: "2020-07-23", produtos: [ {nome_produto: "GLI 720", valor_unitario: 3.4}, {nome_produto: "Pão francês", valor_unitario: 3.4}, {nome_produto: "Linguiça Calabresa", valor_unitario: 7.7}, {} ]  },
+    { id_lista: 8, descricao: "", data: "2020-08-12", produtos: [ {nome_produto: "Soja Integrada", valor_unitario: 10.2}, {nome_produto: "Linguiça Calabresa", valor_unitario: 15.6}, {nome_produto: "Semente Soja", valor_unitario: 3.4}, {} ]  },
+    { id_lista: 8, descricao: "", data: "2020-09-20", produtos: [ {nome_produto: "Preço Milho", valor_unitario: 8.9}, {nome_produto: "Semente Soja", valor_unitario: 3.4}, {nome_produto: "Semente Soja", valor_unitario: 3.4}, {} ]  }
+  ]
+
+  // public produtos_gastos: any = {
+  //   iduser: 10, email: "email@gmail.com",
+  //   meses: [
+  //     {
+  //       id: 1,
+  //       mes_descricao: "Novembro",
+  //       ano: 2019,
+  //       produtos: [
+  //         { id: 1, data_emissao: "2020-05-17T00:00:00.000Z", categoria: "Sementes", valor_unit: 4.2, qtd: 300, unidade: "kg", descricao: "Semente de Soja RR - Terceiros", valor_total: 10200, tipo: 1, tipo_descricao: "gasto" },
+  //         { id: 2, data_emissao: "2020-09-26T00:00:00.000Z", categoria: "Inseticida", valor_unit: 3.2, qtd: 300, unidade: "kg", descricao: "GLI-UP 720 WG C/05 kg", valor_total: 8499, tipo: 1, tipo_descricao: "gasto" },
+  //         { id: 3, data_emissao: "2021-06-10T00:00:00.000Z", categoria: "Festicida", valor_unit: 3, qtd: 300, unidade: "kg", descricao: "Pesticida 8319 J&L", valor_total: 5988, tipo: 1, tipo_descricao: "gasto" }
+  //       ]
+  //     },
+  //     {
+  //       id: 2,
+  //       mes_descricao: "Outubro",
+  //       ano: 2019,
+  //       produtos: [
+  //         { id: 5, data_emissao: "2020-04-10T00:00:00.000Z", categoria: "Sementes", valor_unit: 18.2, qtd: 30, unidade: "saca", descricao: "Semente de Feijão", valor_total: 5988, tipo: 0, tipo_descricao: "gasto" },
+  //         { id: 6, data_emissao: "2020-08-26T00:00:00.000Z", categoria: "Inseticida", valor_unit: 2.4, qtd: 200, unidade: "kg", descricao: "LOPE 99 C/05 kg", valor_total: 2499, tipo: 0, tipo_descricao: "gasto" }
+  //       ]
+  //     }
+  //   ]
+  // };
 
   public ofertas: any = [
-    { idoferta: 1, produto: "Achocolatado Toddy 2kg", valor: 25, estabelecimento: "Mercado Extra", cidade: "São José dos Campos", bairro: "Colinas", localizacao: null, distancia: 3, data_insercao: "2020-06-27T00:00:00.000Z", valido_ate: "2020-08-17T00:00:00.000Z", status: 1,  imagem: "default-product.png", estado: "Válida" },
+    { idoferta: 1, produto: "Achocolatado Toddy 2kg", valor: 25, estabelecimento: "Mercado Extra", cidade: "São José dos Campos", bairro: "Colinas", localizacao: null, distancia: 3, data_insercao: "2020-06-27T00:00:00.000Z", valido_ate: "2020-08-17T00:00:00.000Z", status: 1,  imagem: null, estado: "Válida" },
     { idoferta: 2, produto: "Sabonete Dove 100g", valor: 6, estabelecimento: "Mercado Carrefour", cidade: "São José dos Campos", bairro: "Colinas", localizacao: null, distancia: 4, data_insercao: "2020-06-17T00:00:00.000Z", valido_ate: "2020-06-30T00:00:00.000Z", status: 1, imagem: null, estado: "Próxima do fim" },
-    { idoferta: 9, produto: "Achocolatado Prestígio 250g", valor: 14.5, estabelecimento: "Mercado Extra", cidade: "São José dos Campos", bairro: "Jardim Oswaldo Cruz", localizacao: null, distancia: 3.7, data_insercao: "2020-06-12T00:00:00.000Z", valido_ate: "2020-06-17T00:00:00.000Z", status: 1, imagem: "default-product.png", estado: "Válida" }];
+    { idoferta: 9, produto: "Achocolatado Prestígio 250g", valor: 14.5, estabelecimento: "Mercado Extra", cidade: "São José dos Campos", bairro: "Jardim Oswaldo Cruz", localizacao: null, distancia: 3.7, data_insercao: "2020-06-12T00:00:00.000Z", valido_ate: "2020-06-17T00:00:00.000Z", status: 1, imagem: null, estado: "Válida" }];
 
   public ofertas_favoritadas: any = [
       { idoferta: 2, produto: "Sabonete Dove 100g", valor: 6, estabelecimento: "Mercado Carrefour", cidade: "São José dos Campos", bairro: "Colinas", localizacao: null, distancia: 4, data_insercao: "2020-06-17T00:00:00.000Z", valido_ate: "2020-06-30T00:00:00.000Z", status: 1, imagem: null, estado: "Próxima do fim" },

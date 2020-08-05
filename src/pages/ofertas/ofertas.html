@@ -25,22 +25,22 @@
         <ion-slide *ngFor="let oferta of ofertas; i as index;">
           <ion-card>
             <ion-card-header>
-              <h2 class="titulo_pedidos"> {{oferta.estabelecimento ? oferta.estabelecimento : '---' }} - {{oferta.distancia}} km</h2>
+              <h2 class="titulo_ofertas"> {{oferta.estabelecimento ? oferta.estabelecimento : '---' }} - {{oferta.distancia}} km</h2>
             </ion-card-header>
 
             <ion-card-content>
 
-              <img src="../assets/imgs/{{oferta.imagem ? oferta.imagem : '../assets/imgs/default-product.png'}}" class="center">
+              <img src="../assets/imgs/{{oferta.imagem ? oferta.imagem : 'default-product.png'}}" class="center img-product">
 
-              <h2 class="subtitulo_pedidos" style="margin-top: 2rem;"> PRODUTO </h2>
-              <h2 class="texto_pedidos"> {{oferta.produto ? oferta.produto : '---' }} </h2>
+              <h2 class="subtitulo_ofertas" style="margin-top: 2rem;"> PRODUTO </h2>
+              <h2 class="texto_ofertas"> {{oferta.produto ? oferta.produto : '---' }} </h2>
 
-              <h2 class="subtitulo_pedidos"> VALOR </h2>
-              <h2 class="texto_pedidos" *ngIf="oferta.valor"> {{oferta.valor | currency:'BRL'}} </h2>
-              <h2 class="texto_pedidos" *ngIf="!oferta.valor"> --- </h2>
+              <h2 class="subtitulo_ofertas"> VALOR </h2>
+              <h2 class="texto_ofertas" *ngIf="oferta.valor"> {{oferta.valor | currency:'BRL'}} </h2>
+              <h2 class="texto_ofertas" *ngIf="!oferta.valor"> --- </h2>
 
-              <h2 class="subtitulo_pedidos"> DATA DE VALIDADE </h2>
-              <h2 class="texto_pedidos" style="margin-bottom: 20px;">
+              <h2 class="subtitulo_ofertas"> DATA DE VALIDADE </h2>
+              <h2 class="texto_ofertas" style="margin-bottom: 20px;">
                 {{oferta.valido_ate | date: 'dd/MM/yyyy' }}</h2>
 
             </ion-card-content>
@@ -54,7 +54,7 @@
                 <p>{{oferta.estado}}</p>
               </ion-col>
               <ion-col col-2>
-                <!-- <p class="chat_pedidos" (click)="abrirChat(oferta)">CHAT</p> -->
+                <!-- <p class="chat_ofertas" (click)="abrirChat(oferta)">CHAT</p> -->
               </ion-col>
             </ion-row>
 
@@ -71,22 +71,22 @@
         <ion-slide *ngFor="let oferta of ofertas_favoritadas; i as index;">
           <ion-card>
             <ion-card-header>
-              <h2 class="titulo_pedidos"> {{oferta.estabelecimento ? oferta.estabelecimento : '---' }} - {{oferta.distancia}} km</h2>
+              <h2 class="titulo_ofertas"> {{oferta.estabelecimento ? oferta.estabelecimento : '---' }} - {{oferta.distancia}} km</h2>
             </ion-card-header>
 
             <ion-card-content>
 
-              <img src="../assets/imgs/{{oferta.imagem ? oferta.imagem : '../assets/imgs/default-product.png'}}" class="center">
+              <img src="../assets/imgs/{{oferta.imagem ? oferta.imagem : 'default-product.png'}}" class="center img-product">
 
-              <h2 class="subtitulo_pedidos" style="margin-top: 2rem;"> PRODUTO </h2>
-              <h2 class="texto_pedidos"> {{oferta.produto ? oferta.produto : '---' }} </h2>
+              <h2 class="subtitulo_ofertas" style="margin-top: 2rem;"> PRODUTO </h2>
+              <h2 class="texto_ofertas"> {{oferta.produto ? oferta.produto : '---' }} </h2>
 
-              <h2 class="subtitulo_pedidos"> VALOR </h2>
-              <h2 class="texto_pedidos" *ngIf="oferta.valor"> {{oferta.valor | currency:'BRL'}} </h2>
-              <h2 class="texto_pedidos" *ngIf="!oferta.valor"> --- </h2>
+              <h2 class="subtitulo_ofertas"> VALOR </h2>
+              <h2 class="texto_ofertas" *ngIf="oferta.valor"> {{oferta.valor | currency:'BRL'}} </h2>
+              <h2 class="texto_ofertas" *ngIf="!oferta.valor"> --- </h2>
 
-              <h2 class="subtitulo_pedidos"> DATA DE VALIDADE </h2>
-              <h2 class="texto_pedidos" style="margin-bottom: 20px;">
+              <h2 class="subtitulo_ofertas"> DATA DE VALIDADE </h2>
+              <h2 class="texto_ofertas" style="margin-bottom: 20px;">
                 {{oferta.valido_ate | date: 'dd/MM/yyyy' }}</h2>
 
             </ion-card-content>
@@ -100,7 +100,7 @@
                 <p>{{oferta.estado}}</p>
               </ion-col>
               <ion-col col-2>
-                <!-- <p class="chat_pedidos" (click)="abrirChat(oferta)">CHAT</p> -->
+                <!-- <p class="chat_ofertas" (click)="abrirChat(oferta)">CHAT</p> -->
               </ion-col>
             </ion-row>
 

@@ -16,18 +16,36 @@
 
     <ion-item>
       <ion-label stacked>Descrição (opcional)</ion-label>
-      <ion-input type="number" [(ngModel)]="lista.descricao" required class="input-estoque"></ion-input>
+      <ion-input type="text" [(ngModel)]="lista.descricao" required class="input-estoque"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <ion-list no-lines>
+
+    <div *ngFor="let produto of produtos_adicionados; index as i">
+      <ion-item text-wrap>
+        <ion-note item-start class="numero"> 0{{i+1}}</ion-note>
+        {{produto.nome_produto}}
+        <ion-note item-end class="dados"> {{produto.valor_total | currency:'BRL'}} <br> 
+          <span class="destaque">{{produto.valor_unitario | currency:'BRL'}} </span></ion-note>
+      </ion-item>
+    </div>
+
+    <ion-item text-wrap class="total">
+      <ion-note item-start> TOTAL </ion-note>
+      <ion-note item-end> {{total | currency:'BRL'}} </ion-note>
     </ion-item>
 
   </ion-list>
 
   <div text-center>
-    <button ion-button secondary class="style-button" (click)="salvar()" full [disabled]="disableButton || lista.descricao.length < 2">Salvar</button>
+    <button ion-button secondary class="style-button" (click)="addProduto()" full>Adicionar Produto</button>
   </div>
 
   <ion-fab bottom right>
-    <button ion-fab clear (click)="addProduto()" class="style-fab-button">
-      <ion-icon color="dark" name="md-add"></ion-icon>
+    <button ion-fab clear (click)="salvar()" class="style-fab-button" [disabled]="disableButton || lista.descricao.length < 2">
+      <ion-icon color="dark" name="md-checkmark"></ion-icon>
     </button>
   </ion-fab>
 
