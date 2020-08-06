@@ -1,4 +1,17 @@
 page-lista-de-compras {
+
+    .segment-md .segment-button.segment-activated {
+        font-weight: 700;
+    }
+
+    //linha debaixo da tab
+    .segment-md .segment-button {
+        color: #000;
+        margin: 0 25px;
+        height: 3.3rem;
+        border-bottom-width: 1px;
+        border-bottom-color: rgba(0, 0, 0, 0);
+    }
     
     .style-fab-button {
         width: 48px;

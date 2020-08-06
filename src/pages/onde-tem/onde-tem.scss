@@ -1,3 +1,30 @@
 page-onde-tem {
+    
+    h1 {
+        font-size: 1.5rem !important;
+        color: #222;
+        font-weight: 800;
+    }
+
+    .card-menor {
+        margin: 10px 0px;
+        width: calc(100% - 5px);
+        min-height: 19vh;
+    }
+
+    .titulo-produto {
+        font-size: 1.2rem;
+        text-align: center;
+        color: #222;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+
+    .descricao {
+        font-size: 1.2rem;
+        text-align: left !important;
+        line-height: 1.5;
+        color: #222;
+    }
 
 }

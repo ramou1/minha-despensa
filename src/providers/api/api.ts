@@ -45,12 +45,22 @@ export class ApiProvider {
     {nome_produto: "Sobre coxa", valor_unitario: 15.2}
   ]
 
+  public categorias_produtos: any = [
+    { id_categoria: 1, nome: "Doces", imagem:"doces.png", produtos: [ {nome_produto: "Coxão duro", valor_unitario: 15.6}, {nome_produto: "Pão de Alho", valor_unitario: 3.4}, {nome_produto: "Pão francês", valor_unitario: 5.4}, {nome_produto: "Sobre coxa", valor_unitario: 15.2} ]  },
+    { id_categoria: 4, nome: "Eletrônicos", imagem:"eletronicos.png", produtos: [ {nome_produto: "", valor_unitario: null}, {nome_produto: "", valor_unitario: null}, {nome_produto: "", valor_unitario: 0}, {} ]  },
+    { id_categoria: 12, nome: "Infantil", imagem:"infantil.png", produtos: [ {nome_produto: "", valor_unitario: null}, {nome_produto: "", valor_unitario: null}, {nome_produto: "", valor_unitario: 0}, {} ]  },
+    { id_categoria: 5, nome: "Limpeza", imagem:"limpeza.png", produtos: [ {nome_produto: "Semente Soja", valor_unitario: 10.2}, {nome_produto: "Achocolatado Toddy", valor_unitario: 8.9}, {nome_produto: "Semente Soja", valor_unitario: 10.7}, {} ]  },
+    { id_categoria: 2, nome: "Laticínios", imagem:"laticinios.png", produtos: [ {nome_produto: "GLI 720", valor_unitario: 3.4}, {nome_produto: "Pão francês", valor_unitario: 3.4}, {nome_produto: "Linguiça Calabresa", valor_unitario: 7.7}, {} ]  },
+    { id_categoria: 8, nome: "Frutas", imagem:"frutas.png", produtos: [ {nome_produto: "Soja Integrada", valor_unitario: 10.2}, {nome_produto: "Linguiça Calabresa", valor_unitario: 15.6}, {nome_produto: "Semente Soja", valor_unitario: 3.4}, {} ]  },
+    { id_categoria: 7, nome: "Pets", imagem:"Pets.png", produtos: [ {nome_produto: "Preço Milho", valor_unitario: 8.9}, {nome_produto: "Semente Soja", valor_unitario: 3.4}, {nome_produto: "Semente Soja", valor_unitario: 3.4}, {} ]  },
+    { id_categoria: 3, nome: "Salgadinhos", imagem:"salgadinhos.png", produtos: [ {nome_produto: "", valor_unitario: null}, {nome_produto: "", valor_unitario: null}, {nome_produto: "", valor_unitario: 0}, {} ]  },
+
+  ]
+
   public lista: any = [
     { id_lista: 4, descricao: "Churrasco", data: "2020-05-22", produtos: [ {nome_produto: "Coxão duro", valor_unitario: 15.6}, {nome_produto: "Pão de Alho", valor_unitario: 3.4}, {nome_produto: "Pão francês", valor_unitario: 5.4}, {nome_produto: "Sobre coxa", valor_unitario: 15.2} ]  },
     { id_lista: 8, descricao: "", data: "2020-06-27", produtos: [ {nome_produto: "Semente Soja", valor_unitario: 10.2}, {nome_produto: "Achocolatado Toddy", valor_unitario: 8.9}, {nome_produto: "Semente Soja", valor_unitario: 10.7}, {} ]  },
-    { id_lista: 8, descricao: "Para a mãe", data: "2020-07-23", produtos: [ {nome_produto: "GLI 720", valor_unitario: 3.4}, {nome_produto: "Pão francês", valor_unitario: 3.4}, {nome_produto: "Linguiça Calabresa", valor_unitario: 7.7}, {} ]  },
-    { id_lista: 8, descricao: "", data: "2020-08-12", produtos: [ {nome_produto: "Soja Integrada", valor_unitario: 10.2}, {nome_produto: "Linguiça Calabresa", valor_unitario: 15.6}, {nome_produto: "Semente Soja", valor_unitario: 3.4}, {} ]  },
-    { id_lista: 8, descricao: "", data: "2020-09-20", produtos: [ {nome_produto: "Preço Milho", valor_unitario: 8.9}, {nome_produto: "Semente Soja", valor_unitario: 3.4}, {nome_produto: "Semente Soja", valor_unitario: 3.4}, {} ]  }
+    { id_lista: 9, descricao: "Para a mãe", data: "2020-07-23", produtos: [ {nome_produto: "GLI 720", valor_unitario: 3.4}, {nome_produto: "Pão francês", valor_unitario: 3.4}, {nome_produto: "Linguiça Calabresa", valor_unitario: 7.7}, {} ]  }
   ]
 
   // public produtos_gastos: any = {

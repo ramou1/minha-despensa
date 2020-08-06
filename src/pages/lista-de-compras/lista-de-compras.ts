@@ -21,7 +21,7 @@ import { DetalheListaPage } from '../detalhe-lista/detalhe-lista';
 export class ListaDeComprasPage {
 
   listas: any = this.api.lista;
-  // listas: any;
+  escolha: string = "a-fazer";
   medidas: any;
   loading: Loading;
 

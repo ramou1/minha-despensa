@@ -1,17 +1,37 @@
-<!--
-  Generated template for the OndeTemPage page.
 
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
   <ion-navbar>
-    <ion-title>onde-tem</ion-title>
+    <ion-title>Onde Tem?</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
 
-  <h3 text-center>Encontre seus produtos favoritos perto de você!</h3>
+  <h1 text-center>Encontre seus produtos<br> favoritos perto de você!</h1>
+
+  <ion-row>
+    <ion-col col-6 *ngFor="let categoria of categorias_produtos">
+      <ion-card class="card-menor" color="primary">
+        <ion-card-header text-center>
+          <img src="../assets/imgs/{{categoria.imagem ? categoria.imagem : 'default-product.png'}}" class="center img-product">
+        </ion-card-header>
+        <ion-card-content text-center>
+          <p class="titulo-produto">{{categoria.nome}}</p>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+
+    <!-- <ion-col col-6>
+      <ion-card class="card-menor" color="primary">
+        <ion-card-header text-center>
+          <img src="../assets/imgs/{{oferta.imagem ? oferta.imagem : 'default-product.png'}}" class="center img-product">
+        </ion-card-header>
+        <ion-card-content text-center>
+          <p class="titulo-produto">Faça uma oferta de compra de seu estoque para a Semegrão.</p>
+        </ion-card-content>
+      </ion-card>
+    </ion-col> -->
+
+  </ion-row>
 
 </ion-content>

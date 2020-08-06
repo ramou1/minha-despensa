@@ -4,40 +4,89 @@
       Lista de Compras
     </ion-title>
   </ion-navbar>
+
+  <ion-toolbar no-border-top>
+    <ion-segment [(ngModel)]="escolha">
+      <ion-segment-button value="a-fazer">
+        A Fazer
+      </ion-segment-button>
+      <ion-segment-button value="feitas">
+        Feitas
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+
 </ion-header>
 
 <ion-content padding>
 
-  <ion-card *ngFor="let lista of listas" (click)="abrirLista(lista)">
-    <ion-card-header>
-      <ion-grid>
-        <ion-row>
-          <ion-col col-9>
-            <div class="descricao">{{lista.descricao}}</div>
+  <div [ngSwitch]="escolha">
+
+    <ion-list no-border *ngSwitchCase="'a-fazer'" no-lines>
+      <ion-card *ngFor="let lista of listas" (click)="abrirLista(lista)">
+        <ion-card-header>
+          <ion-grid>
+            <ion-row>
+              <ion-col col-9>
+                <div class="descricao">{{lista.descricao}}</div>
+              </ion-col>
+              <ion-col col-3 class="data-lista" text-wrap>
+                <span>{{lista.data | date: 'dd/MM/yy'}}</span>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+
+        </ion-card-header>
+
+        <ion-card-content text-center>
+          <!-- <span class="qtd">{{lista.qtd_produtos ? lista.qtd_produtos : '0'}}</span> -->
+        </ion-card-content>
+
+        <ion-row class="cardfooter">
+          <ion-col col-10>
+            <p class=" produtos">Produto 1, produto 2, produto 3, produto 4, produto 5</p>
           </ion-col>
-          <ion-col col-3 class="data-lista" text-wrap>
-            <span>{{lista.data | date: 'dd/MM/yy'}}</span> 
+          <ion-col col-2>
+            <img src="../assets/imgs/edit.svg" style="width: auto; float: right;" (click)="editarLista(lista)">
           </ion-col>
         </ion-row>
-      </ion-grid>
+      </ion-card>
+    </ion-list>
 
-    </ion-card-header>
+    <ion-list *ngSwitchCase="'feitas'" no-lines>
+      <ion-card *ngFor="let lista of listas" (click)="abrirLista(lista)">
+        <ion-card-header>
+          <ion-grid>
+            <ion-row>
+              <ion-col col-9>
+                <div class="descricao">{{lista.descricao}}</div>
+              </ion-col>
+              <ion-col col-3 class="data-lista" text-wrap>
+                <span>{{lista.data | date: 'dd/MM/yy'}}</span>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
 
-    <ion-card-content text-center>
-      <!-- <span class="qtd">{{lista.qtd_produtos ? lista.qtd_produtos : '0'}}</span> -->
-    </ion-card-content>
+        </ion-card-header>
 
-    <ion-row class="cardfooter">
-      <ion-col col-10>
-        <p class=" produtos">Produto 1, produto 2, produto 3, produto 4, produto 5</p>
-      </ion-col>
-      <ion-col col-2>
-        <img src="../assets/imgs/edit.svg" style="width: auto; float: right;" (click)="editarLista(lista)">
-      </ion-col>
-    </ion-row>
-  </ion-card>
+        <ion-card-content text-center>
+          <!-- <span class="qtd">{{lista.qtd_produtos ? lista.qtd_produtos : '0'}}</span> -->
+        </ion-card-content>
 
-  <div style="margin-bottom: 70px;"></div>
+        <ion-row class="cardfooter">
+          <ion-col col-10>
+            <p class=" produtos">Produto 1, produto 2, produto 3, produto 4, produto 5</p>
+          </ion-col>
+          <ion-col col-2>
+            <img src="../assets/imgs/edit.svg" style="width: auto; float: right;" (click)="editarLista(lista)">
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-list>
+
+  </div>
+
+  <div style="margin-bottom: 60px;"></div>
 
   <!-- <img src="../assets/imgs/add.svg" style="padding: 30px 0;" class="novo-estoque" (click)="addLista()"> -->
 
