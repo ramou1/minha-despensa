@@ -1,19 +1,30 @@
-
 <ion-header>
   <ion-navbar>
     <ion-title>Onde Tem?</ion-title>
   </ion-navbar>
+  <!-- (ionInput)="filtrar($event)" -->
+  <ion-searchbar [(ngModel)]="pesquisa" (ionChange)="filtrar(pesquisa)" placeholder="Encontre seus produtos favoritos" color="secondary"></ion-searchbar>
 </ion-header>
 
 <ion-content padding>
 
-  <h1 text-center>Encontre seus produtos<br> favoritos perto de você!</h1>
+  <!-- <h1 text-center>Encontre seus produtos<br> favoritos perto de você!</h1> -->
 
-  <ion-row>
-    <ion-col col-6 *ngFor="let categoria of categorias_produtos">
+  <ion-list *ngIf="pesquisa !== ''">
+    <p *ngFor="let categoria of listaFiltrada" class="categoria-pesquisa">
+      {{categoria.nome}}
+      <ion-item *ngFor="let produto of categoria.produtos" class="produto-pesquisa">
+        {{ produto.nome_produto }}
+      </ion-item>
+    </p>
+  </ion-list>
+
+  <ion-row [hidden]>
+    <ion-col col-6 *ngFor="let categoria of categorias_produtos" (click)="abrirProdutos(categoria)">
       <ion-card class="card-menor" color="primary">
         <ion-card-header text-center>
-          <img src="../assets/imgs/{{categoria.imagem ? categoria.imagem : 'default-product.png'}}" class="center img-product">
+          <img src="../assets/imgs/{{categoria.imagem ? categoria.imagem : 'default-product.png'}}"
+            class="center img-product">
         </ion-card-header>
         <ion-card-content text-center>
           <p class="titulo-produto">{{categoria.nome}}</p>

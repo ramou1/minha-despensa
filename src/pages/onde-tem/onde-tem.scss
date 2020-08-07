@@ -6,10 +6,23 @@ page-onde-tem {
         font-weight: 800;
     }
 
+    .searchbar-md .searchbar-input {
+        font-size: 1.2rem !important;
+    }
+
     .card-menor {
         margin: 10px 0px;
         width: calc(100% - 5px);
         min-height: 19vh;
+    }
+
+    .categoria-pesquisa {
+        font-weight: 600;
+        color: map-get($colors, primary);
+    }
+    
+    .produto-pesquisa {
+        font-size: 1.2rem;
     }
 
     .titulo-produto {

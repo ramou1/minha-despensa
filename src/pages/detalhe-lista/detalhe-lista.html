@@ -24,15 +24,15 @@
 
     <div *ngFor="let nota of notaEscolhida.produtos; index as i">
       <ion-item text-wrap>
-        <ion-checkbox color="dark" checked="true">aa</ion-checkbox>
+        <ion-checkbox color="dark" checked="true"></ion-checkbox>
         <ion-label class="titulo"> {{nota.nome_produto}}</ion-label>
-        <ion-note item-end class="destaque">{{nota.valor_unitario | currency:'BRL'}}</ion-note>
+        <ion-note item-end class="valor">{{nota.valor_unitario | currency:'BRL'}}</ion-note>
       </ion-item>
     </div>
 
     <ion-item text-wrap class="total">
       <ion-note item-start> TOTAL </ion-note>
-      <ion-note item-end> {{total | currency:'BRL'}} </ion-note>
+      <ion-note item-end> {{total ? total : 0 | currency:'BRL'}} </ion-note>
     </ion-item>
 
   </ion-list>

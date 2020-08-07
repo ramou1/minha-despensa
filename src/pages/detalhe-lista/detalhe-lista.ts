@@ -27,6 +27,12 @@ export class DetalheListaPage {
   itens_nota: any = this.api.itens_nota;
   notaEscolhida: any = this.navParams.get('lista');
 
+
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad DetalheListaPage');
+    this.loadData();
+  }
+  
   loadData() {
     console.log("Nota escolhida: ", this.notaEscolhida);
 
@@ -53,11 +59,6 @@ export class DetalheListaPage {
     //   // console.log("Itens da nota mockado: ", this.itens_nota1);
     // });
 
-  }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad DetalheListaPage');
-    this.loadData();
   }
 
   cancelar() {

@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{this.categoriaEscolhida.nome}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-fab top right>
+  <button ion-fab clear (click)=cancelar() class="style-fab-button">
+    <ion-icon color="dark" name="md-close"></ion-icon>
+  </button>
+</ion-fab>
+
+<ion-content padding>
+
+  <ion-list>
+    <ion-item *ngFor="let produto of categoriaEscolhida.produtos">
+      <ion-thumbnail item-start>
+        <img src="../assets/imgs/{{produto.imagem ? produto.imagem : 'default-product.png'}}" class="imagem-produto">
+      </ion-thumbnail>
+      {{ produto.nome_produto }}
+    </ion-item>
+  </ion-list>
+
+
+</ion-content>

@@ -18,6 +18,7 @@ import { NovaListaPage } from '../pages/nova-lista/nova-lista';
 import { EditListaPage } from '../pages/edit-lista/edit-lista';
 import { DetalheListaPage } from '../pages/detalhe-lista/detalhe-lista';
 import { NovoProdutoPage } from '../pages/novo-produto/novo-produto';
+import { ListaDeProdutosPage } from '../pages/lista-de-produtos/lista-de-produtos';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { NovoProdutoPage } from '../pages/novo-produto/novo-produto';
     DetalheListaPage,
     NovoProdutoPage,
     OndeTemPage,
+    ListaDeProdutosPage,
     OfertasPage,
     LoginPage,
     CadastroPage,
@@ -47,6 +49,7 @@ import { NovoProdutoPage } from '../pages/novo-produto/novo-produto';
     DetalheListaPage,
     NovoProdutoPage,
     OndeTemPage,
+    ListaDeProdutosPage,
     OfertasPage,
     LoginPage,
     CadastroPage,
