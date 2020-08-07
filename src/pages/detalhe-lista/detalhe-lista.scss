@@ -13,26 +13,24 @@ page-detalhe-lista {
         //     text-align: left;
         //     margin-left: 12vh;
         // }
+
+        .item.item-md .checkbox-md {
+            margin: 10px;
+            margin-left: 0;
+        }
     
         .label-md {
             color: #000;
             font-size: 1.2rem !important;
-            font-weight: 600;
+            font-weight: 700;
             text-transform: uppercase;
-            margin-top: 8px !important;
+            line-height: 1.2rem !important;
         }
-    
-        .numero, .dados {
-            text-align: right;
-            line-height: 1.5;
-            text-transform: uppercase;
+
+        .destaque {
+            color: map-get($colors, primary);
             font-size: 1.2rem;
-            color: #000;
-            font-weight: 600;
-            // width: 25px;
-            .destaque {
-                color: map-get($colors, primary);
-            }
+            font-weight: 700;
         }
 
         //Estilizando o Total
