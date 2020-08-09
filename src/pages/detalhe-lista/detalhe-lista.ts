@@ -36,6 +36,10 @@ export class DetalheListaPage {
   loadData() {
     console.log("Nota escolhida: ", this.notaEscolhida);
 
+    for(let x = 0; x < this.notaEscolhida.produtos.length; x++) {
+      this.total += this.notaEscolhida.produtos[x].valor_unitario;
+    }
+
     // this.loading = this.loadingCtrl.create({
     //   // content: 'Carregando...',
     // });

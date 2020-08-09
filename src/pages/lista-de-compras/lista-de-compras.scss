@@ -31,6 +31,7 @@ page-lista-de-compras {
     .produtos {
         color: map-get($colors, primary);
         text-align: left;
+        text-transform: lowercase;
         font-size: 1.1rem;
         font-weight: 600;
     }
@@ -52,6 +53,10 @@ page-lista-de-compras {
         text-align: center;
         margin: auto;
         display: block;
+    }
+
+    .conteudo {
+        white-space: nowrap;
     }
 
 }

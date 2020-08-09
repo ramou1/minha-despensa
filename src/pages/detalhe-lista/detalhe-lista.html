@@ -32,21 +32,21 @@
 
     <ion-item text-wrap class="total">
       <ion-note item-start> TOTAL </ion-note>
-      <ion-note item-end> {{total ? total : 0 | currency:'BRL'}} </ion-note>
+      <ion-note item-end> {{total | currency:'BRL'}} </ion-note>
     </ion-item>
 
   </ion-list>
 
-  <ion-fab bottom right>
+  <!-- <ion-fab bottom right>
     <button ion-fab clear (click)=addProduto() class="novo-produto">
       NOVO PRODUTO
     </button>
-  </ion-fab>
+  </ion-fab> -->
 
-  <!-- <ion-fab bottom right>
+  <ion-fab bottom right>
     <button ion-fab clear (click)="addProduto()" class="style-fab-button">
       <ion-icon color="dark" name="md-add"></ion-icon>
     </button>
-  </ion-fab> -->
+  </ion-fab>
 
 </ion-content>

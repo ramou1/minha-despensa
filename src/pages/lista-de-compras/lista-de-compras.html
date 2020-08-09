@@ -39,17 +39,19 @@
         </ion-card-header>
 
         <ion-card-content text-center>
-          <!-- <span class="qtd">{{lista.qtd_produtos ? lista.qtd_produtos : '0'}}</span> -->
+          <ion-col class="conteudo">
+            <span *ngFor="let produto of lista.produtos" class="produtos">{{produto.nome_produto}}, </span>
+          </ion-col>
         </ion-card-content>
 
-        <ion-row class="cardfooter">
-          <ion-col col-10>
-            <p class=" produtos">Produto 1, produto 2, produto 3, produto 4, produto 5</p>
-          </ion-col>
+        <!--<ion-row class="cardfooter">
+           <ion-col>
+            <span *ngFor="let produto of lista.produtos" class="produtos">{{produto.nome_produto}}, </span>
+          </ion-col> 
           <ion-col col-2>
-            <img src="../assets/imgs/edit.svg" style="width: auto; float: right;" (click)="editarLista(lista)">
+             <img src="../assets/imgs/edit.svg" style="width: auto; float: right;" (click)="editarLista(lista)">
           </ion-col>
-        </ion-row>
+        </ion-row> -->
       </ion-card>
     </ion-list>
 
@@ -70,17 +72,11 @@
         </ion-card-header>
 
         <ion-card-content text-center>
-          <!-- <span class="qtd">{{lista.qtd_produtos ? lista.qtd_produtos : '0'}}</span> -->
+          <ion-col class="conteudo">
+            <span *ngFor="let produto of lista.produtos" class="produtos">{{produto.nome_produto}}, </span>
+          </ion-col>        
         </ion-card-content>
 
-        <ion-row class="cardfooter">
-          <ion-col col-10>
-            <p class=" produtos">Produto 1, produto 2, produto 3, produto 4, produto 5</p>
-          </ion-col>
-          <ion-col col-2>
-            <img src="../assets/imgs/edit.svg" style="width: auto; float: right;" (click)="editarLista(lista)">
-          </ion-col>
-        </ion-row>
       </ion-card>
     </ion-list>
 
