@@ -20,7 +20,8 @@ import { DetalheListaPage } from '../detalhe-lista/detalhe-lista';
 })
 export class ListaDeComprasPage {
 
-  listas: any = this.api.lista;
+  listas_fazer: any = this.api.lista_fazer;
+  listas_finalizadas: any = this.api.lista_finalizada;
   escolha: string = "a-fazer";
   medidas: any;
   loading: Loading;
@@ -34,7 +35,8 @@ export class ListaDeComprasPage {
   }
 
   loadData() {
-    console.log("Listas de compras: ", this.listas); 
+    console.log("Compras a fazer: ", this.listas_fazer); 
+    console.log("Compras finalizadas: ", this.listas_finalizadas); 
 
     // this.loading = this.loadingCtrl.create({
     //   // content: 'Carregando Estoque...',
@@ -42,28 +44,8 @@ export class ListaDeComprasPage {
 
     // this.loading.present().then(() => {
     //   this.api.getEstoque().then((res1: any) => {
-    //     this.api.getMedidas().then((res2: any) => {
-
     //       this.loading.dismiss().then(() => {
     //         this.estoques = res1;
-    //         this.medidas = res2;
-            
-    //         // alterando os números para o nome da unidade
-    //         for(var x = 0; x < this.estoques.length; x++) {
-    //           for(var y = 0; y < this.medidas.length; y++) {
-    //             if(this.medidas[y].idTipo == this.estoques[x].unidade) {
-    //               this.estoques[x].unidade = this.medidas[y].nome;
-    //             }
-                  
-    //           }
-    //         }
-    //         console.log("MEDIDAS: ", this.medidas);
-    //         console.log("GET ESTOQUES: ", this.estoques);
-    //       });
-
-    //     }).catch((e) => {
-    //       console.log("Não foi possível listar as medidas. Detalhes: " + JSON.stringify(e));
-    //     });
     //   }).catch((e) => {
     //     console.log("Não foi possível listar os estoques. Detalhes: " + JSON.stringify(e));
     //     this.utils.presentErrorToast("Não foi possível listar os estoques.");
@@ -76,7 +58,6 @@ export class ListaDeComprasPage {
     this.navCtrl.push(DetalheListaPage, {
       lista: lista
     });
-    // this.utils.presentErrorToast("Detalhe do estoque indisponível.");
   }
 
   editarLista(lista) {

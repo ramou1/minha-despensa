@@ -24,6 +24,7 @@ export class DetalheListaPage {
   loading: Loading;
   total: number = 0;
   peso_total: number = 0;
+  disableButton: boolean = false;
   itens_nota: any = this.api.itens_nota;
   notaEscolhida: any = this.navParams.get('lista');
 
@@ -67,6 +68,15 @@ export class DetalheListaPage {
 
   cancelar() {
     this.navCtrl.pop();
+  }
+
+  finalizar() {
+    this.disableButton = true;
+
+    this.utils.presentSuccessToast("Lista finalizada com sucesso!");
+    setTimeout(() => {
+      this.navCtrl.pop();
+    }, 1500);
   }
 
   addProduto() {

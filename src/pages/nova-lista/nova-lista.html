@@ -25,8 +25,9 @@
 
     <div *ngFor="let produto of produtos_adicionados; index as i">
       <ion-item text-wrap>
-        <ion-note item-start class="numero"> 0{{i+1}}</ion-note>
-        <span class="dados">{{produto.nome_produto}}</span>
+        <!-- <ion-note item-start class="numero"> 0{{i+1}}</ion-note> -->
+        <ion-checkbox color="dark"></ion-checkbox>
+        <ion-label>{{produto.nome_produto}}</ion-label>
         <ion-note item-end class="valor">{{produto.valor_unitario | currency:'BRL'}} </ion-note>
       </ion-item>
     </div>

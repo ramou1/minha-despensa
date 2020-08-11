@@ -24,8 +24,8 @@
 
     <div *ngFor="let nota of notaEscolhida.produtos; index as i">
       <ion-item text-wrap>
-        <ion-checkbox color="dark" checked="true"></ion-checkbox>
-        <ion-label class="titulo"> {{nota.nome_produto}}</ion-label>
+        <ion-checkbox color="dark" [checked]="notaEscolhida.finalizada" [disabled]="notaEscolhida.finalizada"></ion-checkbox>
+        <ion-label> {{nota.nome_produto}}</ion-label>
         <ion-note item-end class="valor">{{nota.valor_unitario | currency:'BRL'}}</ion-note>
       </ion-item>
     </div>
@@ -43,9 +43,15 @@
     </button>
   </ion-fab> -->
 
-  <ion-fab bottom right>
-    <button ion-fab clear (click)="addProduto()" class="style-fab-button">
+  <ion-fab bottom left *ngIf="!notaEscolhida.finalizada">
+    <button ion-fab clear (click)="addProduto()" class="style-fab-button" [disabled]="disableButton">
       <ion-icon color="dark" name="md-add"></ion-icon>
+    </button>
+  </ion-fab>
+
+  <ion-fab bottom right>
+    <button ion-fab clear (click)="finalizar()" class="style-fab-button" [disabled]="disableButton">
+      <ion-icon color="dark" name="md-checkmark"></ion-icon>
     </button>
   </ion-fab>
 

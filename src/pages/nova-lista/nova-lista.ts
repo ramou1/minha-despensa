@@ -24,7 +24,7 @@ export class NovaListaPage {
   lista: any = { id: '', descricao: '', produtos: [] };
   produtos_adicionados: any = this.api.produtos_adicionados;
   disableButton: boolean = false;
-  total: number = 30;
+  total: number = 0;
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad NovaListaPage');

@@ -23,7 +23,7 @@
   <div [ngSwitch]="escolha">
 
     <ion-list no-border *ngSwitchCase="'a-fazer'" no-lines>
-      <ion-card *ngFor="let lista of listas" (click)="abrirLista(lista)">
+      <ion-card *ngFor="let lista of listas_fazer" (click)="abrirLista(lista)">
         <ion-card-header>
           <ion-grid>
             <ion-row>
@@ -56,7 +56,7 @@
     </ion-list>
 
     <ion-list *ngSwitchCase="'feitas'" no-lines>
-      <ion-card *ngFor="let lista of listas" (click)="abrirLista(lista)">
+      <ion-card *ngFor="let lista of listas_finalizadas" (click)="abrirLista(lista)">
         <ion-card-header>
           <ion-grid>
             <ion-row>
