@@ -30,6 +30,7 @@ export class OfertasPage {
 
   loadData() {
     console.log("Ofertas: ", this.ofertas); 
+    console.log("Favoritadas: ", this.ofertas_favoritadas);
 
     // this.loading = this.loadingCtrl.create({
       // content: 'Carregando...',
@@ -49,8 +50,16 @@ export class OfertasPage {
   }
 
   favoritarOferta(oferta) {
-    this.icone_padrao = "star";
+    
 
+    if(this.icone_padrao == "star") {
+      this.desfavoritarOferta(oferta);
+    }
+    else {
+      this.icone_padrao = "star";
+      this.ofertas_favoritadas.push(oferta);
+    }
+    
     // this.categorias = !this.categorias;
     // this.subcategoria1 = !this.subcategoria1;
     // this.filtro = 'Categoria';
@@ -61,6 +70,13 @@ export class OfertasPage {
 
   desfavoritarOferta(oferta) {
     console.log("Oferta a ser desfavoritada: ", oferta);
+    this.icone_padrao = "star-outline";
+
+    var index = this.ofertas_favoritadas.indexOf(oferta);
+
+    if ( index > -1) {
+      this.ofertas_favoritadas.splice(index, 1); 
+    }
 
     const confirm = this.alertCtrl.create({
       title: 'Deseja desfavoritar a oferta?',
@@ -90,6 +106,11 @@ export class OfertasPage {
       ]
     });
     confirm.present();
+  }
+
+  abrirMapa(oferta) {
+    console.log("Abrir mapa da localização: ", oferta.localizacao);
+    
   }
 
 }
