@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, Loading, LoadingController } from 'ionic-angular';
 import { ApiProvider } from '../../providers/api/api';
 import { UtilsProvider } from '../../providers/utils/utils';
+import { ListaDeComprasPage } from '../lista-de-compras/lista-de-compras';
 
 /**
  * Generated class for the NovoProdutoPage page.
@@ -34,7 +35,6 @@ export class NovoProdutoPage {
     this.loadData();
   }
 
-
   loadData() {
     // this.api.getTiposProdutos().then((res: any) => {
     //   this.produtos = res;
@@ -62,7 +62,7 @@ export class NovoProdutoPage {
     this.idproduto = produto.idproduto;
   }
 
-  salvar() {
+  salvar(produto) {
     this.disableButton = true;
     // this.loading = this.loadingCtrl.create({
     //   // content: 'Carregando...',
@@ -74,6 +74,7 @@ export class NovoProdutoPage {
     //     this.loading.dismiss().then(() => {
           this.utils.presentSuccessToast("Produto adicionado com sucesso!");
           setTimeout(() => {
+            // this.navCtrl.getPrevious().data.produtos;
             this.navCtrl.pop();
           }, 1500);
     //     });

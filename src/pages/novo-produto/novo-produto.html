@@ -42,7 +42,7 @@
   </ion-list>
 
   <div text-center>
-    <button ion-button secondary class="style-button" (click)="salvar()" full [disabled]="disableButton || produto.nome.length < 2">Salvar</button>
+    <button ion-button secondary class="style-button" (click)="salvar(produto)" full [disabled]="disableButton || produto.nome.length < 2">Salvar</button>
   </div>
 
 </ion-content>

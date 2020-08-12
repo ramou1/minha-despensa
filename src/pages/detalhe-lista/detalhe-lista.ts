@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, Loading, LoadingController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Loading, LoadingController, AlertController } from 'ionic-angular';
 import { ApiProvider } from '../../providers/api/api';
 import { UtilsProvider } from '../../providers/utils/utils';
 import { NovoProdutoPage } from '../novo-produto/novo-produto';
@@ -18,7 +18,7 @@ import { NovoProdutoPage } from '../novo-produto/novo-produto';
 })
 export class DetalheListaPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public api: ApiProvider, public utils: UtilsProvider, public loadingCtrl: LoadingController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController,public api: ApiProvider, public utils: UtilsProvider, public loadingCtrl: LoadingController) {
   }
 
   loading: Loading;
@@ -71,12 +71,40 @@ export class DetalheListaPage {
   }
 
   finalizar() {
-    this.disableButton = true;
+    if(!this.notaEscolhida.finalizada) {
+      const confirm = this.alertCtrl.create({
+        title: 'Deseja finalizar a lista?',
+        subTitle: 'Ainda há produtos sem marcação.',
+        buttons: [
+          {
+            text: 'Sim',
+            handler: () => {
+              this.disableButton = true;
+              this.utils.presentSuccessToast("Lista finalizada com sucesso!");
+                setTimeout(() => {
+                  this.navCtrl.pop();
+                }, 1500);
+            }
+          },
+          {
+            text: 'Não',
+            cssClass: 'cancelButton',
+            handler: () => {
+              // console.log('Não finalizar.');
+            }
+          }
+        ]
+      });
+      confirm.present();
+    }
 
-    this.utils.presentSuccessToast("Lista finalizada com sucesso!");
-    setTimeout(() => {
-      this.navCtrl.pop();
-    }, 1500);
+    else {
+      this.disableButton = true;
+      setTimeout(() => {
+        this.navCtrl.pop();
+      }, 1500);
+    }
+    
   }
 
   addProduto() {

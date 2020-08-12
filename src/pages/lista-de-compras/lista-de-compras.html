@@ -38,7 +38,7 @@
 
         </ion-card-header>
 
-        <ion-card-content text-center>
+        <ion-card-content>
           <ion-col class="conteudo">
             <span *ngFor="let produto of lista.produtos" class="produtos">{{produto.nome_produto}}, </span>
           </ion-col>
@@ -57,23 +57,23 @@
 
     <ion-list *ngSwitchCase="'feitas'" no-lines>
       <ion-card *ngFor="let lista of listas_finalizadas" (click)="abrirLista(lista)">
+
         <ion-card-header>
           <ion-grid>
             <ion-row>
               <ion-col col-9>
-                <div class="descricao">{{lista.descricao}}</div>
+                <div class="descricao finalizado">{{lista.descricao}}</div>
               </ion-col>
-              <ion-col col-3 class="data-lista" text-wrap>
+              <ion-col col-3 class="data-lista finalizado" text-wrap>
                 <span>{{lista.data | date: 'dd/MM/yy'}}</span>
               </ion-col>
             </ion-row>
           </ion-grid>
-
         </ion-card-header>
 
-        <ion-card-content text-center>
+        <ion-card-content>
           <ion-col class="conteudo">
-            <span *ngFor="let produto of lista.produtos" class="produtos">{{produto.nome_produto}}, </span>
+            <span *ngFor="let produto of lista.produtos" class="produtos finalizado">{{produto.nome_produto}}, </span>
           </ion-col>        
         </ion-card-content>
 

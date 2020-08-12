@@ -19,16 +19,16 @@ import { DetalheListaPage } from '../detalhe-lista/detalhe-lista';
 })
 export class ListaDeComprasPage {
 
+  teste: any;
   listas_fazer: any = this.api.lista_fazer;
   listas_finalizadas: any = this.api.lista_finalizada;
   escolha: string = "a-fazer";
-  medidas: any;
   loading: Loading;
 
   constructor(public navCtrl: NavController, public utils: UtilsProvider, public api: ApiProvider, public loadingCtrl: LoadingController, public navParams: NavParams) {
   }
 
-  ionViewDidEnter() {
+  ionViewDidLoad() {
     console.log('ionViewDidLoad ListaDeComprasPage');
     this.loadData();
   }
@@ -36,6 +36,9 @@ export class ListaDeComprasPage {
   loadData() {
     console.log("Compras a fazer: ", this.listas_fazer); 
     console.log("Compras finalizadas: ", this.listas_finalizadas); 
+    // this.teste = this.navParams.get('produtos');
+    // console.log("produto: ", this.teste);
+    
 
     // this.loading = this.loadingCtrl.create({
     //   // content: 'Carregando Estoque...',

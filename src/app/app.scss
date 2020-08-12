@@ -30,6 +30,11 @@ ion-icon {
     display: block;
 }
 
+//estilizando os cards
+.card-md {
+    border-radius: 15px;
+}
+
 // estilizando o spinner de carregamento
 .loading-md .loading-wrapper {
     background: transparent !important;
@@ -71,6 +76,10 @@ ion-icon {
     font-size: 1.7rem;
     text-align: left;
     font-weight: 600;
+}
+
+.alert-md .alert-sub-title {
+    font-size: 1.3rem;
 }
 
 // aumentando o tamanho do popup

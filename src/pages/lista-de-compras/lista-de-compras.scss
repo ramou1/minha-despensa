@@ -30,10 +30,14 @@ page-lista-de-compras {
 
     .produtos {
         color: map-get($colors, primary);
-        text-align: left;
         text-transform: lowercase;
         font-size: 1.1rem;
         font-weight: 600;
+    }
+
+    .finalizado {
+        opacity: 0.5;
+        text-decoration: line-through;
     }
 
     ion-card-header {
