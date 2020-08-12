@@ -1,0 +1,41 @@
+page-detalhe-produto {
+
+    .back-button-md {
+        display: none !important;
+    }
+
+    //estilizando os cards
+    .titulo_produto {
+        font-size: 1.4rem;
+        color: map-get($colors, primary);
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    .titulo-estabelecimento {
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: map-get($colors, primary);
+    }
+
+    .subtitulo-estabelecimento {
+        font-size: 1rem;
+        font-weight: 600;        
+    }
+
+    .item-md ion-thumbnail {
+        min-width: 40px !important;
+        min-height: 40px !important;
+    }
+
+    .item-md ion-thumbnail ion-img, .item-md ion-thumbnail img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .img-produto {
+        width: 65% !important;
+        padding: 10px;
+    }
+
+}

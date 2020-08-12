@@ -19,6 +19,7 @@ import { EditListaPage } from '../pages/edit-lista/edit-lista';
 import { DetalheListaPage } from '../pages/detalhe-lista/detalhe-lista';
 import { NovoProdutoPage } from '../pages/novo-produto/novo-produto';
 import { ListaDeProdutosPage } from '../pages/lista-de-produtos/lista-de-produtos';
+import { DetalheProdutoPage } from '../pages/detalhe-produto/detalhe-produto';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { ListaDeProdutosPage } from '../pages/lista-de-produtos/lista-de-produto
     NovoProdutoPage,
     OndeTemPage,
     ListaDeProdutosPage,
+    DetalheProdutoPage,
     OfertasPage,
     LoginPage,
     CadastroPage,
@@ -50,6 +52,7 @@ import { ListaDeProdutosPage } from '../pages/lista-de-produtos/lista-de-produto
     NovoProdutoPage,
     OndeTemPage,
     ListaDeProdutosPage,
+    DetalheProdutoPage,
     OfertasPage,
     LoginPage,
     CadastroPage,

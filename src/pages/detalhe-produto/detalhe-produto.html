@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Onde Tem?</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-fab top right>
+  <button ion-fab clear (click)=cancelar() class="style-fab-button">
+    <ion-icon color="dark" name="md-close"></ion-icon>
+  </button>
+</ion-fab>
+
+<ion-content padding>
+
+  <ion-card>
+    <img src="../assets/imgs/{{produtoEscolhido.imagem}}" class="center img-produto">
+    <ion-card-content>
+      <ion-card-title>
+        <h3 text-center class="titulo_produto">{{produtoEscolhido.nome_produto}}</h3>
+      </ion-card-title>
+    </ion-card-content>
+    <!--<ion-fab right top>
+       <button ion-fab>
+        <ion-icon name="pin"></ion-icon>
+      </button> 
+    </ion-fab>-->
+  
+    <ion-item *ngFor="let estabelecimento of estabelecimentos">
+      <ion-thumbnail item-start>
+        <img src="../assets/imgs/{{estabelecimento.imagem ? estabelecimento.imagem : 'default-store.png'}}">
+      </ion-thumbnail>
+      <h2 class="titulo-estabelecimento">{{estabelecimento.nome_estabelecimento}}</h2>
+      <p class="subtitulo-estabelecimento">{{estabelecimento.endereco}}</p>
+    </ion-item>
+  </ion-card>
+
+</ion-content>

@@ -2,7 +2,7 @@
   <ion-navbar>
     <!-- <ion-title>Detalhe Lista</ion-title> -->
     <h2 text-center>Lista de Compras</h2>
-  <h3 text-center>{{notaEscolhida.descricao}}</h3>
+  <h3 text-center>{{notaEscolhida.descricao ? notaEscolhida.descricao : ''}}</h3>
   <h4 text-center>{{notaEscolhida.data | date: 'dd/MM/yyyy'}}</h4>
   </ion-navbar>
 </ion-header>

@@ -46,14 +46,14 @@ export class ApiProvider {
   ]
 
   public categorias_produtos: any = [
-    { id_categoria: 1, nome: "Doces", imagem:"doces.png", produtos: [ {nome_produto: "Balas de Gelatina Dentadura Fini 100g", valor_unitario: 4.6}, {nome_produto: "Balas de Gelatina Minhoca Cítrica Fini 100g", valor_unitario: 3.4}, {nome_produto: "Chocolate Garoto Talento Branco Tablete 90g", valor_unitario: 3.99}, {nome_produto: "Creme de Avelã Nutella Ferrero Pote - 140g", valor_unitario: 9.99}, {nome_produto: "Creme de Avelã Nutella Ferrero Pote - 350g", valor_unitario: 21.42} ]  },
-    { id_categoria: 4, nome: "Eletrônicos", imagem:"eletronicos.png", produtos: [ {nome_produto: "Smartphone Motorola One Macro Azul Espacial 64GB, Tela Max Vision de 6.2, Câmera Traseira Tripla, Android 9.0", valor_unitario: 1299}, {nome_produto: "Monitor LED 15.6 Widescreen", valor_unitario: 324.85}, {nome_produto: "iPhone XR Apple Preto 128GB, Tela Retina LCD 6,1, iOS 12, Câmera Traseira 12MP", valor_unitario: 3.799}, { nome_produto: "Smartphone Samsung Galaxy A30s Branco 64GB RAM, Tela Infinita", valor_unitario: 1.499} ]  },
-    { id_categoria: 12, nome: "Infantil", imagem:"infantil.png", produtos: [ {nome_produto: null, valor_unitario: null}, {nome_produto: "", valor_unitario: null}, {nome_produto: "", valor_unitario: 0}, {} ]  },
-    { id_categoria: 5, nome: "Limpeza", imagem:"limpeza.png", produtos: [ {nome_produto: "Semente Soja", valor_unitario: 10.2}, {nome_produto: "Achocolatado Toddy", valor_unitario: 8.9}, {nome_produto: "Semente Soja", valor_unitario: 10.7}, {} ]  },
-    { id_categoria: 2, nome: "Laticínios", imagem:"laticinios.png", produtos: [ {nome_produto: "GLI 720", valor_unitario: 3.4}, {nome_produto: "Pão francês", valor_unitario: 3.4}, {nome_produto: "Linguiça Calabresa", valor_unitario: 7.7}, {} ]  },
-    { id_categoria: 8, nome: "Frutas", imagem:"frutas.png", produtos: [ {nome_produto: "Soja Integrada", valor_unitario: 10.2}, {nome_produto: "Linguiça Calabresa", valor_unitario: 15.6}, {nome_produto: "Semente Soja", valor_unitario: 3.4}, {} ]  },
-    { id_categoria: 7, nome: "Pets", imagem:"Pets.png", produtos: [ {nome_produto: "Preço Milho", valor_unitario: 8.9}, {nome_produto: "Semente Soja", valor_unitario: 3.4}, {nome_produto: "Semente Soja", valor_unitario: 3.4}, {} ]  },
-    { id_categoria: 3, nome: "Salgadinhos", imagem:"salgadinhos.png", produtos: [ {nome_produto: "", valor_unitario: null}, {nome_produto: "", valor_unitario: null}, {nome_produto: "", valor_unitario: 0}, {} ]  },
+    { id_categoria: 1, nome: "Doces", imagem:"doces.png", produtos: [ {nome_produto: "Balas de Gelatina Dentadura Fini 100g", valor_unitario: 4.6, imagem:"fini-dentaduras.png"}, {nome_produto: "Balas de Gelatina Minhoca Cítrica Fini 100g", valor_unitario: 3.4, imagem:"doces.png"}, {nome_produto: "Chocolate Garoto Talento Branco Tablete 90g", valor_unitario: 3.99, imagem:"doces.png"}, {nome_produto: "Creme de Avelã Nutella Ferrero Pote - 140g", valor_unitario: 9.99, imagem:"doces.png"}, {nome_produto: "Creme de Avelã Nutella Ferrero Pote - 350g", valor_unitario: 21.42, imagem:"doces.png"} ]  },
+    { id_categoria: 4, nome: "Eletrônicos", imagem:"eletronicos.png", produtos: [ {nome_produto: "Smartphone Motorola One Macro Azul Espacial 64GB, Tela Max Vision de 6.2, Câmera Traseira Tripla, Android 9.0", valor_unitario: 1299, imagem:"doces.png"}, {nome_produto: "Monitor LED 15.6 Widescreen", valor_unitario: 324.85, imagem:"doces.png"}, {nome_produto: "iPhone XR Apple Preto 128GB, Tela Retina LCD 6,1, iOS 12, Câmera Traseira 12MP", valor_unitario: 3.799, imagem:"doces.png"}, { nome_produto: "Smartphone Samsung Galaxy A30s Branco 64GB RAM, Tela Infinita", valor_unitario: 1.499, imagem:"doces.png"} ]  },
+    { id_categoria: 12, nome: "Infantil", imagem:"infantil.png", produtos: [ {nome_produto: null, valor_unitario: null, imagem:"doces.png"}, {nome_produto: "", valor_unitario: null, imagem:"doces.png"}, {nome_produto: "", valor_unitario: 0}, {} ]  },
+    { id_categoria: 5, nome: "Limpeza", imagem:"limpeza.png", produtos: [ {nome_produto: "Semente Soja", valor_unitario: 10.2, imagem:"doces.png"}, {nome_produto: "Achocolatado Toddy", valor_unitario: 8.9, imagem:"doces.png"}, {nome_produto: "Semente Soja", valor_unitario: 10.7, imagem:"doces.png"}, {} ]  },
+    { id_categoria: 2, nome: "Laticínios", imagem:"laticinios.png", produtos: [ {nome_produto: "GLI 720", valor_unitario: 3.4, imagem:"doces.png"}, {nome_produto: "Pão francês", valor_unitario: 3.4, imagem:"doces.png"}, {nome_produto: "Linguiça Calabresa", valor_unitario: 7.7, imagem:"doces.png"}, {} ]  },
+    { id_categoria: 8, nome: "Frutas", imagem:"frutas.png", produtos: [ {nome_produto: "Soja Integrada", valor_unitario: 10.2, imagem:"doces.png"}, {nome_produto: "Linguiça Calabresa", valor_unitario: 15.6, imagem:"doces.png"}, {nome_produto: "Semente Soja", valor_unitario: 3.4, imagem:"doces.png"} ]  },
+    { id_categoria: 7, nome: "Pets", imagem:"Pets.png", produtos: [ {nome_produto: "Preço Milho", valor_unitario: 8.9, imagem:"doces.png"}, {nome_produto: "Semente Soja", valor_unitario: 3.4, imagem:"doces.png"}, {nome_produto: "Semente Soja", valor_unitario: 3.4, imagem:"doces.png"}, {} ]  },
+    { id_categoria: 3, nome: "Salgadinhos", imagem:"salgadinhos.png", produtos: [ {nome_produto: "", valor_unitario: null, imagem:"doces.png"}, {nome_produto: "", valor_unitario: null, imagem:"doces.png"}, {nome_produto: "", valor_unitario: 0, imagem:"doces.png"}, {} ]  },
 
   ]
 
@@ -65,6 +65,13 @@ export class ApiProvider {
     { id_lista: 4, descricao: "Churras", data: "2020-05-23", finalizada: true, produtos: [ {nome_produto: "Coxão duro", valor_unitario: 15.6}, {nome_produto: "Pão de Alho", valor_unitario: 3.4}, {nome_produto: "Pão francês", valor_unitario: 5.4}, {nome_produto: "Sobre coxa", valor_unitario: 15.2} ]  },
     { id_lista: 8, descricao: "", data: "2020-06-27", finalizada: true, produtos: [ {nome_produto: "Semente Soja", valor_unitario: 10.2}, {nome_produto: "Achocolatado Toddy", valor_unitario: 8.9}, {nome_produto: "Semente Soja", valor_unitario: 10.7}, {} ]  },
     { id_lista: 9, descricao: "Para a mãe", data: "2020-07-23", finalizada: true, produtos: [ {nome_produto: "GLI 720", valor_unitario: 3.4}, {nome_produto: "Pão francês", valor_unitario: 3.4}, {nome_produto: "Linguiça Calabresa", valor_unitario: 7.7}, {} ]  }
+  ]
+
+  public estabelecimentos: any = [
+    {nome_estabelecimento: "Mercado Extra", imagem: null, endereco: "Rua Adão Mariano Gomes, 234", distancia: 3.1}, 
+    {nome_estabelecimento: "Mercado Carrefour", imagem: null, endereco: "Travessa Zilma Martins, 463", distancia: 4.3}, 
+    {nome_estabelecimento: "Mercado BIG", imagem: null, endereco: "Rua Antônio M. Arruda, 276", distancia: 1.61}, 
+    {nome_estabelecimento: "Mercado Tenda", imagem: null, endereco: "Rua Dom Pedro II, 1609", distancia: 6.2}
   ]
 
   // public produtos_gastos: any = {

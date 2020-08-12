@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { DetalheProdutoPage } from '../detalhe-produto/detalhe-produto';
 
 /**
  * Generated class for the ListaDeProdutosPage page.
@@ -27,6 +28,12 @@ export class ListaDeProdutosPage {
   
   loadData() {
     console.log("Categoria escolhida: ", this.categoriaEscolhida);
+  }
+
+  abrirDetalhes(produto) {
+    this.navCtrl.push(DetalheProdutoPage, {
+      produto: produto
+    });
   }
 
   cancelar() {
