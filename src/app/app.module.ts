@@ -15,7 +15,6 @@ import { ListaDeComprasPage } from '../pages/lista-de-compras/lista-de-compras';
 import { OndeTemPage } from '../pages/onde-tem/onde-tem';
 import { OfertasPage } from '../pages/ofertas/ofertas';
 import { NovaListaPage } from '../pages/nova-lista/nova-lista';
-import { EditListaPage } from '../pages/edit-lista/edit-lista';
 import { DetalheListaPage } from '../pages/detalhe-lista/detalhe-lista';
 import { NovoProdutoPage } from '../pages/novo-produto/novo-produto';
 import { ListaDeProdutosPage } from '../pages/lista-de-produtos/lista-de-produtos';
@@ -26,7 +25,6 @@ import { DetalheProdutoPage } from '../pages/detalhe-produto/detalhe-produto';
     MyApp,
     ListaDeComprasPage,
     NovaListaPage,
-    EditListaPage,
     DetalheListaPage,
     NovoProdutoPage,
     OndeTemPage,
@@ -47,7 +45,6 @@ import { DetalheProdutoPage } from '../pages/detalhe-produto/detalhe-produto';
     MyApp,
     ListaDeComprasPage,
     NovaListaPage,
-    EditListaPage,
     DetalheListaPage,
     NovoProdutoPage,
     OndeTemPage,

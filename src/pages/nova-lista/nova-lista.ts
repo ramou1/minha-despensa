@@ -84,6 +84,10 @@ export class NovaListaPage {
     confirm.present();
   }
 
+  retirarProduto(produto) {
+    console.log("Retirar produto: ", produto);
+  }
+
   addProduto() {
     this.navCtrl.push(NovoProdutoPage);
   }

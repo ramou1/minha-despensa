@@ -25,7 +25,7 @@
       </button> 
     </ion-fab>-->
   
-    <ion-item *ngFor="let estabelecimento of estabelecimentos">
+    <ion-item *ngFor="let estabelecimento of estabelecimentos" (click)=abrirMapa(estabelecimento)>
       <ion-thumbnail item-start>
         <img src="../assets/imgs/{{estabelecimento.imagem ? estabelecimento.imagem : 'default-store.png'}}">
       </ion-thumbnail>

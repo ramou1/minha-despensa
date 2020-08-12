@@ -36,4 +36,8 @@ export class DetalheProdutoPage {
     this.navCtrl.pop();
   }
 
+  abrirMapa(estabelecimento) {
+    console.log("Abrir mapa da localização: ", estabelecimento.endereco);
+  }
+
 }

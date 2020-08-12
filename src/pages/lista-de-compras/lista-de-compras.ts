@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, Loading, LoadingController } from 'ionic-angular';
 import { UtilsProvider } from '../../providers/utils/utils';
 import { ApiProvider } from '../../providers/api/api';
-import { EditListaPage } from '../edit-lista/edit-lista';
 import { NovaListaPage } from '../nova-lista/nova-lista';
 import { DetalheListaPage } from '../detalhe-lista/detalhe-lista';
 
@@ -60,11 +59,11 @@ export class ListaDeComprasPage {
     });
   }
 
-  editarLista(lista) {
-    this.navCtrl.push(EditListaPage, {
-      lista: lista
-    });
-  }
+  // editarLista(lista) {
+  //   this.navCtrl.push(EditListaPage, {
+  //     lista: lista
+  //   });
+  // }
 
   addLista() {
     this.navCtrl.push(NovaListaPage);

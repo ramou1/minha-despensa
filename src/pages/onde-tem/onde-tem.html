@@ -13,14 +13,14 @@
   <ion-list *ngIf="pesquisa !== ''">
     <p *ngFor="let categoria of listaFiltrada" class="categoria-pesquisa">
       {{categoria.nome}}
-      <ion-item *ngFor="let produto of categoria.produtos" class="produto-pesquisa">
+      <ion-item *ngFor="let produto of categoria.produtos" class="produto-pesquisa" (click)="abrirProduto(produto)">
         {{ produto.nome_produto }}
       </ion-item>
     </p>
   </ion-list>
 
   <ion-row [hidden]>
-    <ion-col col-6 *ngFor="let categoria of categorias_produtos" (click)="abrirProdutos(categoria)">
+    <ion-col col-6 *ngFor="let categoria of categorias_produtos" (click)="abrirCategoria(categoria)">
       <ion-card class="card-menor" color="primary">
         <ion-card-header text-center>
           <img src="../assets/imgs/{{categoria.imagem ? categoria.imagem : 'default-product.png'}}"

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ApiProvider } from '../../providers/api/api';
 import { ListaDeProdutosPage } from '../lista-de-produtos/lista-de-produtos';
+import { DetalheProdutoPage } from '../detalhe-produto/detalhe-produto';
 
 /**
  * Generated class for the OndeTemPage page.
@@ -51,9 +52,15 @@ export class OndeTemPage {
   //     })
   //   }
   // }
-  abrirProdutos(categoria) {
+  abrirCategoria(categoria) {
     this.navCtrl.push(ListaDeProdutosPage, {
       categoria: categoria
+    });
+  }
+
+  abrirProduto(produto) {
+    this.navCtrl.push(DetalheProdutoPage, {
+      produto: produto
     });
   }
 

@@ -110,7 +110,6 @@ export class OfertasPage {
 
   abrirMapa(oferta) {
     console.log("Abrir mapa da localização: ", oferta.localizacao);
-    
   }
 
 }
