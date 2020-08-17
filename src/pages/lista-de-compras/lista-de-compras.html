@@ -1,8 +1,16 @@
 <ion-header>
   <ion-navbar>
+
+    <ion-buttons left>
+      <button ion-button icon-only (click)="sair()">
+        <ion-icon name="md-exit"></ion-icon>
+      </button>
+    </ion-buttons>
+
     <ion-title>
       Lista de Compras
     </ion-title>
+
   </ion-navbar>
 
   <ion-toolbar no-border-top>
@@ -74,7 +82,7 @@
         <ion-card-content>
           <ion-col class="conteudo">
             <span *ngFor="let produto of lista.produtos" class="produtos finalizado">{{produto.nome_produto}}, </span>
-          </ion-col>        
+          </ion-col>
         </ion-card-content>
 
       </ion-card>

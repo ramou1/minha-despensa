@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, Loading, LoadingController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Loading, LoadingController, AlertController, App } from 'ionic-angular';
 import { UtilsProvider } from '../../providers/utils/utils';
 import { ApiProvider } from '../../providers/api/api';
 import { NovaListaPage } from '../nova-lista/nova-lista';
 import { DetalheListaPage } from '../detalhe-lista/detalhe-lista';
+import { LoginPage } from '../login/login';
 
 /**
  * Generated class for the ListaDeComprasPage page.
@@ -25,7 +26,7 @@ export class ListaDeComprasPage {
   escolha: string = "a-fazer";
   loading: Loading;
 
-  constructor(public navCtrl: NavController, public utils: UtilsProvider, public api: ApiProvider, public loadingCtrl: LoadingController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public utils: UtilsProvider, public app:App, public alertCtrl: AlertController, public api: ApiProvider, public loadingCtrl: LoadingController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
@@ -62,14 +63,36 @@ export class ListaDeComprasPage {
     });
   }
 
-  // editarLista(lista) {
-  //   this.navCtrl.push(EditListaPage, {
-  //     lista: lista
-  //   });
-  // }
 
   addLista() {
     this.navCtrl.push(NovaListaPage);
+  }
+
+  sair() { 
+    const confirm = this.alertCtrl.create({
+      title: 'Deseja realmente sair do aplicativo?',
+      buttons: [
+        {
+          text: 'Sim',
+          handler: () => {
+            console.log("Logout!");
+            this.api.logout().then(() => {
+              this.app.getRootNav().setRoot(LoginPage);
+            }).catch((e) => {
+              console.log(e);
+            });
+          }
+        },
+        {
+          text: 'Não',
+          cssClass: 'cancelButton',
+          handler: () => {
+            console.log('Cancelou a saída.');
+          }
+        }
+      ]
+    });
+    confirm.present();
   }
 
 }

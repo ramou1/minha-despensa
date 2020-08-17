@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, Loading, LoadingController } from 'ionic-angular';
 import { ApiProvider } from '../../providers/api/api';
 import { UtilsProvider } from '../../providers/utils/utils';
-import { ListaDeComprasPage } from '../lista-de-compras/lista-de-compras';
 
 /**
  * Generated class for the NovoProdutoPage page.

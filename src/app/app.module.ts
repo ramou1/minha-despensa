@@ -19,6 +19,7 @@ import { DetalheListaPage } from '../pages/detalhe-lista/detalhe-lista';
 import { NovoProdutoPage } from '../pages/novo-produto/novo-produto';
 import { ListaDeProdutosPage } from '../pages/lista-de-produtos/lista-de-produtos';
 import { DetalheProdutoPage } from '../pages/detalhe-produto/detalhe-produto';
+import { IonicStorageModule } from '@ionic/storage';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,11 @@ import { DetalheProdutoPage } from '../pages/detalhe-produto/detalhe-produto';
   imports: [
     BrowserModule,
     HttpClientModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot({
+      name: '__minhadespensa',
+      driverOrder: ['indexeddb', 'sqlite', 'websql']
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [

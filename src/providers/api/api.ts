@@ -1,21 +1,18 @@
 import { HttpClient } from '@angular/common/http';
 // import { Http, Headers, RequestOptions } from '@angular/http';
+import { Storage } from '@ionic/storage';
 import { Injectable } from '@angular/core';
 import { config } from '../../config';
 
-/*
-  Generated class for the ApiProvider provider.
 
-  See https://angular.io/guide/dependency-injection for more info on providers
-  and Angular DI.
-*/
 @Injectable()
 export class ApiProvider {
 
   headers = new Headers();
   options: any;
+  user: any = {};
 
-  constructor(public http: HttpClient) {
+  constructor(public http: HttpClient, private storage: Storage) {
     console.log('Hello ApiProvider Provider');
 
     this.headers.append('Content-Type', 'application/x-www-form-urlencoded');
@@ -115,6 +112,36 @@ export class ApiProvider {
     { id_nota: 8, nome_produto: "Soja Integrada", qtd: 300, unity: "kg", valor_unitario: 3.4 },
     { id_nota: 8, nome_produto: "Comp. Preço Milho - Insutria", qtd: 300, unity: "kg", valor_unitario: 3.4 }
   ]
+
+  // ------------------------------LOCAL STORAGE USUARIO------------------------------
+  salvarUsuario(user) {
+    return this.storage.set('users', user);
+  }
+
+  carregarUsuario() {
+    return this.storage.get('users').then((user) => {
+      if (user) {
+        console.warn('Api/carregarUsuario: Usuário encontrado no localStorage', user);
+        this.user = user;
+        return Promise.resolve(user);
+      }
+      console.warn("Api/carregarUsuario: Usuário não encontrado no localStorage");
+      return Promise.reject(false);
+    }).catch((e) => {
+      console.warn("Api/carregarUsuario: Usuário não encontrado no localStorage. Detalhes:", e);
+      return Promise.reject(false);
+    });
+  }
+
+  logout() {
+    return this.storage.clear();
+  }
+
+  login(email, senha) {
+    var data = { email: email, password: senha };
+    console.log("Dados sendo enviados: ", data);
+    this.salvarUsuario(data);
+  }
   
     // mostrar todas as ofertas
     getOfertas() {
