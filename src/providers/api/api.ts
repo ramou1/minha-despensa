@@ -36,10 +36,10 @@ export class ApiProvider {
   }
 
   public produtos_adicionados: any = [
-    {nome_produto: "Picanha", valor_unitario: 25.6}, 
-    {nome_produto: "Pão de Alho", valor_unitario: 3.4}, 
-    {nome_produto: "Pão francês", valor_unitario: 5.4}, 
-    {nome_produto: "Sobre coxa", valor_unitario: 15.2}
+    // {nome_produto: "Picanha", valor_unitario: 25.6}, 
+    // {nome_produto: "Pão de Alho", valor_unitario: 3.4}, 
+    // {nome_produto: "Pão francês", valor_unitario: 5.4}, 
+    // {nome_produto: "Sobre coxa", valor_unitario: 15.2}
   ]
 
   public categorias_produtos: any = [
@@ -49,7 +49,7 @@ export class ApiProvider {
     { id_categoria: 5, nome: "Limpeza", imagem:"limpeza.png", produtos: [ {nome_produto: "Sabão em Pó OMO Lavagem Perfeita 800g", valor_unitario: 9.99, imagem:"omo01.jpg"}, {nome_produto: "Sabão Líquido OMO Lavagem Perfeita 3L", valor_unitario: 31.9, imagem:"omo02.jpg"}, {nome_produto: "Detergente Líquido 500ml Neutro 1 UN Ypê", valor_unitario: 1.8, imagem:"detergente.jpg"}, {nome_produto: "Amaciante Diluído Comfort Azul 2L", valor_unitario: 12.8, imagem:"amaciante.jpg"}, {nome_produto: "Desinfetante Líquido Pinho Sol - Lavanda 1L", valor_unitario: 10, imagem:"desinfetante.png"}, {nome_produto: "Água Sanitária Super Cândida 5 litros", valor_unitario: 11.99, imagem:"agua-sanitaria.jpg"} ]  },
     { id_categoria: 2, nome: "Laticínios", imagem:"laticinios.png", produtos: [ {nome_produto: "Leite Piracanjuba 1L (Caixa 12 Unidades)", valor_unitario: 46.2, imagem:"leite01.jpg"}, {nome_produto: "Leite Longa Vida Integral ITALAC 1 Litro", valor_unitario: 3.89, imagem:"leite02.jpg"}, {nome_produto: "Queijo Minas Frescal Danubio 500G", valor_unitario: 18.9, imagem:"queijo.jpg"}, {nome_produto: "Manteiga Extra com Sal Batavo Tablete 200g", valor_unitario: 9, imagem:"manteiga01.jpg"}, {nome_produto: "Manteiga com Sal Aviação Pote 200g", valor_unitario: 8.8, imagem:"manteiga02.jpg"} ]  },
     { id_categoria: 8, nome: "Frutas", imagem:"frutas.png", produtos: [ {nome_produto: "Limão Taiti Kg", valor_unitario: 7.99, imagem:"limao.png"}, {nome_produto: "Laranja - Saco De 5 Kg (50 Unidades)", valor_unitario: 32, imagem:"laranja.jpg"}, {nome_produto: "Uva Itália Qualitá Bandeja 500g", valor_unitario: 8.19, imagem:"uva.jpg"} ]  },
-    { id_categoria: 7, nome: "Pets", imagem:"Pets.png", produtos: [ {nome_produto: "Preço Milho", valor_unitario: 8.9, imagem:"doces.png"}, {nome_produto: "Semente Soja", valor_unitario: 3.4, imagem:"doces.png"}, {nome_produto: "Semente Soja", valor_unitario: 3.4, imagem:"doces.png"}, {} ]  },
+    { id_categoria: 7, nome: "Pets", imagem:"Pets.png", produtos: [ {nome_produto: "Ração para Cães Adultos Pedigree Carne, Frango e Cereais", valor_unitario: 174.9, imagem:"racao01.jpg"}, {nome_produto: "Ração para Roedores Serelepe 750g", valor_unitario: 13.4, imagem:"racao02.jpg"}, {nome_produto: "Ração Special Dog Premium Carne para Cães Adultos", valor_unitario: 86.9, imagem:"racao03.jpg"}, {nome_produto: "Tapete Higiênico para Cachorro Super Secão 30 Unidades", valor_unitario: 74.2, imagem:"tapete-higienico.jpg"}, {nome_produto: "Comedouro The Pets Brasil Inox Patas Relevo para Cães", valor_unitario: 13.69, imagem:"comedouro.jpg"}, {nome_produto: "Coleira e Peitoral Toh Outdoor Laguna", valor_unitario: 40.6, imagem:"coleira.jpg"}, {nome_produto: "Caminha Europa Paris Fábrica Pet - Azul Marinho", valor_unitario: 53, imagem:"caminha.jpg"}, {nome_produto: "Kit Truqys Pets Bandeja Design+ Bebedouro Automático + Comedouro Inclinado - Preto", valor_unitario: 62.9, imagem:"bebedouro.jpg"} ]  },
     { id_categoria: 3, nome: "Salgadinhos", imagem:"salgadinhos.png", produtos: [ {nome_produto: "Salgadinho Batata Ruffles Original 300g", valor_unitario: 18.2, imagem:"ruffles.png"}, {nome_produto: "Salgadinho Sabor Requeijão Cheetos Onda 45g", valor_unitario: 3.2, imagem:"cheetos01.jpg"}, {nome_produto: "Salgadinho Sabor Queijo Cheddar Cheetos Tubo 45g", valor_unitario: 3.2, imagem:"cheetos02.jpg"}, {nome_produto: "Salgadinho de Queijo Nacho Doritos 167g", valor_unitario: 9.99, imagem:"doritos.jpg"}, {nome_produto: "Salgadinho de Milho Presunto Fandangos 45g", valor_unitario: 2.99, imagem:"fandangos.png"}, {nome_produto:"Salgadinho De Milho Elma Chips Cebolitos 110g", valor_unitario: 7.69, imagem: "cebolitos.jpg"} ]  },
 
   ]
@@ -97,13 +97,13 @@ export class ApiProvider {
   // };
 
   public ofertas: any = [
-    { idoferta: 1, produto: "Achocolatado Toddy 2kg", valor: 25, estabelecimento: "Mercado Extra", cidade: "São José dos Campos", bairro: "Colinas", localizacao: null, distancia: 3, data_insercao: "2020-06-27T00:00:00.000Z", valido_ate: "2020-08-17T00:00:00.000Z", status: 1,  imagem: null, estado: "Válida" },
-    { idoferta: 2, produto: "Sabonete Dove 100g", valor: 6, estabelecimento: "Mercado Carrefour", cidade: "São José dos Campos", bairro: "Colinas", localizacao: null, distancia: 4, data_insercao: "2020-06-17T00:00:00.000Z", valido_ate: "2020-06-30T00:00:00.000Z", status: 1, imagem: null, estado: "Próxima do fim" },
-    { idoferta: 9, produto: "Achocolatado Prestígio 250g", valor: 14.5, estabelecimento: "Mercado Extra", cidade: "São José dos Campos", bairro: "Jardim Oswaldo Cruz", localizacao: null, distancia: 3.7, data_insercao: "2020-06-12T00:00:00.000Z", valido_ate: "2020-06-17T00:00:00.000Z", status: 1, imagem: null, estado: "Válida" }];
+    { idoferta: 1, produto: "Achocolatado Toddy 2kg", valor: 25, estabelecimento: "Mercado Extra", cidade: "São José dos Campos", bairro: "Colinas", localizacao: null, distancia: 3, data_insercao: "2020-06-27T00:00:00.000Z", valido_ate: "2020-08-17T00:00:00.000Z", status: 1,  imagem: "achocolatado01.jpg", estado: "Válida" },
+    { idoferta: 2, produto: "Sabonete Dove 90g", valor: 6, estabelecimento: "Mercado Carrefour", cidade: "São José dos Campos", bairro: "Colinas", localizacao: null, distancia: 4, data_insercao: "2020-06-17T00:00:00.000Z", valido_ate: "2020-06-30T00:00:00.000Z", status: 1, imagem: "sabonete.jpg", estado: "Próxima do fim" },
+    { idoferta: 9, produto: "Achocolatado Nestlé Prestígio Shake 200g", valor: 7.5, estabelecimento: "Mercado Extra", cidade: "São José dos Campos", bairro: "Jardim Oswaldo Cruz", localizacao: null, distancia: 3.7, data_insercao: "2020-06-12T00:00:00.000Z", valido_ate: "2020-06-17T00:00:00.000Z", status: 1, imagem: "achocolatado02.jpg", estado: "Válida" }];
 
   public ofertas_favoritadas: any = [
-      { idoferta: 2, produto: "Sabonete Dove 100g", valor: 6, estabelecimento: "Mercado Carrefour", cidade: "São José dos Campos", bairro: "Colinas", localizacao: null, distancia: 4, data_insercao: "2020-06-17T00:00:00.000Z", valido_ate: "2020-06-30T00:00:00.000Z", status: 1, imagem: null, estado: "Próxima do fim" },
-      { idoferta: 9, produto: "Achocolatado Prestígio 250g", valor: 14.5, estabelecimento: "Mercado Extra", cidade: "São José dos Campos", bairro: "Jardim Oswaldo Cruz", localizacao: null, distancia: 3.7, data_insercao: "2020-06-12T00:00:00.000Z", valido_ate: "2020-06-17T00:00:00.000Z", status: 1, imagem: "default-product.png", estado: "Válida" }];
+      { idoferta: 2, produto: "Sabonete Dove 90g", valor: 6, estabelecimento: "Mercado Carrefour", cidade: "São José dos Campos", bairro: "Colinas", localizacao: null, distancia: 4, data_insercao: "2020-06-17T00:00:00.000Z", valido_ate: "2020-06-30T00:00:00.000Z", status: 1, imagem: "sabonete.jpg", estado: "Próxima do fim" },
+      { idoferta: 9, produto: "Achocolatado Nestlé Prestígio Shake 200g", valor: 7.5, estabelecimento: "Mercado Extra", cidade: "São José dos Campos", bairro: "Jardim Oswaldo Cruz", localizacao: null, distancia: 3.7, data_insercao: "2020-06-12T00:00:00.000Z", valido_ate: "2020-06-17T00:00:00.000Z", status: 1, imagem: "achocolatado02.jpg", estado: "Válida" }];
   
     public itens_nota: any = [
     { id_nota: 4, nome_produto: "Semente de Soja BMX Potência RR - Terceiros", qtd: 300, unity: "kg", valor_unitario: 3.4 },
