@@ -39,20 +39,32 @@
 
   </ion-list>
 
-  <div text-center>
-    <button ion-button secondary class="style-button" (click)="addProduto()" full>Adicionar Produto</button>
-  </div>
-
   <ion-fab bottom right>
     <button ion-fab clear (click)="salvar()" class="style-fab-button" [disabled]="disableButton || lista.descricao.length < 2">
       <ion-icon color="dark" name="md-checkmark"></ion-icon>
     </button>
   </ion-fab>
 
-  <!-- <ion-fab bottom right>
-    <button ion-fab clear (click)=addProduto() class="novo-produto">
-      NOVO PRODUTO
-    </button>
-  </ion-fab> -->
-
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col col-7 class="form-input">
+          <ion-input type="text" placeholder="Produto" [(ngModel)]="produto.nome" required></ion-input>
+        </ion-col>
+        <ion-col col-3 class="form-input">
+          <ion-input type="number" placeholder="Preço" [(ngModel)]="produto.valor" required></ion-input>
+        </ion-col>
+        <ion-col col-2 class="form-input">
+          <button ion-button clear icon-only (click)="addProduto()">
+            <ion-icon color="dark" name="md-send"></ion-icon>
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </ion-toolbar>
+</ion-footer>

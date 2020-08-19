@@ -16,7 +16,6 @@ import { OndeTemPage } from '../pages/onde-tem/onde-tem';
 import { OfertasPage } from '../pages/ofertas/ofertas';
 import { NovaListaPage } from '../pages/nova-lista/nova-lista';
 import { DetalheListaPage } from '../pages/detalhe-lista/detalhe-lista';
-import { NovoProdutoPage } from '../pages/novo-produto/novo-produto';
 import { ListaDeProdutosPage } from '../pages/lista-de-produtos/lista-de-produtos';
 import { DetalheProdutoPage } from '../pages/detalhe-produto/detalhe-produto';
 import { IonicStorageModule } from '@ionic/storage';
@@ -27,7 +26,6 @@ import { IonicStorageModule } from '@ionic/storage';
     ListaDeComprasPage,
     NovaListaPage,
     DetalheListaPage,
-    NovoProdutoPage,
     OndeTemPage,
     ListaDeProdutosPage,
     DetalheProdutoPage,
@@ -51,7 +49,6 @@ import { IonicStorageModule } from '@ionic/storage';
     ListaDeComprasPage,
     NovaListaPage,
     DetalheListaPage,
-    NovoProdutoPage,
     OndeTemPage,
     ListaDeProdutosPage,
     DetalheProdutoPage,

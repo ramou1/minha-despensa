@@ -75,8 +75,17 @@ page-detalhe-lista {
             display: none !important;
         }
     
-        ion-list {
+        .produtos-lista {
             margin-top: 35px !important;
         }    
+
+        .form-input {
+            background: #e7e7e7ba;
+        }
+
+        .remove-button {
+            border-radius: 20px;
+            font-size: 1.2rem;
+        }
 
 }

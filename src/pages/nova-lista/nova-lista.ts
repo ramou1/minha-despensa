@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
-import { NovoProdutoPage } from '../novo-produto/novo-produto';
 import { UtilsProvider } from '../../providers/utils/utils';
 import { ApiProvider } from '../../providers/api/api';
 
@@ -22,6 +21,7 @@ export class NovaListaPage {
   }
 
   lista: any = { id: '', descricao: '', produtos: [] };
+  produto: any = {nome: '', valor: '' };
   produtos_adicionados: any = this.api.produtos_adicionados;
   disableButton: boolean = false;
   total: number = 0;
@@ -35,6 +35,9 @@ export class NovaListaPage {
     for(let x = 0; x < this.produtos_adicionados.length; x++) {
       this.total += this.produtos_adicionados[x].valor_unitario;
     }
+
+    console.log("Produtos: ", this.produtos_adicionados);
+    
   }
 
   salvar() {
@@ -84,12 +87,32 @@ export class NovaListaPage {
     confirm.present();
   }
 
-  retirarProduto(produto) {
-    console.log("Retirar produto: ", produto);
+  addProduto() {
+    var dados: any = {nome_produto: this.produto.nome, valor_unitario: this.produto.valor };
+    this.produtos_adicionados.push(dados);
+
+    this.produto.nome = "";
+    this.produto.valor = "";
+
+    // this.loading = this.loadingCtrl.create({
+    //   // content: 'Carregando...',
+    // });
+
+    // this.loading.present().then(() => {
+
+    //   this.api.criarEstoque(this.produto.qtd, this.idarmazem, this.idproduto, this.produto.cliente, this.idmedida).then((result: any) => {
+    //     this.loading.dismiss().then(() => {
+    //     });
+    //   }).catch((error: any) => {
+    //     console.log("Erro ao cadastrar!", error.message);
+    //     this.loading.dismiss();
+    //     this.utils.presentErrorToast("Erro ao cadastrar!");
+    //   });
+    // });
   }
 
-  addProduto() {
-    this.navCtrl.push(NovoProdutoPage);
+  retirarProduto(produto) {
+    console.log("Retirar produto: ", produto);
   }
 
 }

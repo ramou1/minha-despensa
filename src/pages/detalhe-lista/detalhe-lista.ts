@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, Loading, LoadingController, AlertController } from 'ionic-angular';
 import { ApiProvider } from '../../providers/api/api';
 import { UtilsProvider } from '../../providers/utils/utils';
-import { NovoProdutoPage } from '../novo-produto/novo-produto';
 
 /**
  * Generated class for the DetalheListaPage page.
@@ -27,6 +26,7 @@ export class DetalheListaPage {
   disableButton: boolean = false;
   itens_nota: any = this.api.itens_nota;
   notaEscolhida: any = this.navParams.get('lista');
+  produto: any = {nome: '', valor: '' };
 
 
   ionViewDidLoad() {
@@ -40,6 +40,18 @@ export class DetalheListaPage {
     for(let x = 0; x < this.notaEscolhida.produtos.length; x++) {
       this.total += this.notaEscolhida.produtos[x].valor_unitario;
     }
+  }
+
+  cancelar() {
+    this.navCtrl.pop();
+  }
+
+  addProduto() {
+    var dados: any = {nome_produto: this.produto.nome, valor_unitario: this.produto.valor };
+    this.notaEscolhida.produtos.push(dados);
+
+    this.produto.nome = "";
+    this.produto.valor = "";
 
     // this.loading = this.loadingCtrl.create({
     //   // content: 'Carregando...',
@@ -47,68 +59,55 @@ export class DetalheListaPage {
 
     // this.loading.present().then(() => {
 
-    //   this.api.getDetalhesNota(this.notaEscolhida.id).then((res: any) => {
+    //   this.api.criarEstoque(this.produto.qtd, this.idarmazem, this.idproduto, this.produto.cliente, this.idmedida).then((result: any) => {
     //     this.loading.dismiss().then(() => {
-    //       this.itens_nota = res;
-    //       console.log("Itens da nota original: ", this.itens_nota);
-    //       for(let x = 0; x < this.itens_nota.length; x++) {
-    //         this.total += this.itens_nota[x].valor_total;
-    //         this.peso_total += this.itens_nota[x].qtd;
-    //       }
     //     });
-    //   }).catch((e) => {
-    //     console.log("Não foi possível listar os itens da nota. Detalhes: " + JSON.stringify(e));
-    //     this.utils.presentErrorToast("Não foi possível listar os itens da nota.");
+    //   }).catch((error: any) => {
+    //     console.log("Erro ao cadastrar!", error.message);
+    //     this.loading.dismiss();
+    //     this.utils.presentErrorToast("Erro ao cadastrar!");
     //   });
-
-    //   // console.log("Itens da nota mockado: ", this.itens_nota1);
     // });
-
   }
 
-  cancelar() {
-    this.navCtrl.pop();
+  removerProduto(nota) {
+    console.log("Remover: ", nota);
   }
 
-  finalizar() {
-    if(!this.notaEscolhida.finalizada) {
-      const confirm = this.alertCtrl.create({
-        title: 'Deseja finalizar a lista?',
-        subTitle: 'Ainda há produtos sem marcação.',
-        buttons: [
-          {
-            text: 'Sim',
-            handler: () => {
-              this.disableButton = true;
-              this.utils.presentSuccessToast("Lista finalizada com sucesso!");
-                setTimeout(() => {
-                  this.navCtrl.pop();
-                }, 1500);
-            }
-          },
-          {
-            text: 'Não',
-            cssClass: 'cancelButton',
-            handler: () => {
-              // console.log('Não finalizar.');
-            }
-          }
-        ]
-      });
-      confirm.present();
-    }
+  // finalizar() {
+  //   if(!this.notaEscolhida.finalizada) {
+  //     const confirm = this.alertCtrl.create({
+  //       title: 'Deseja finalizar a lista?',
+  //       subTitle: 'Ainda há produtos sem marcação.',
+  //       buttons: [
+  //         {
+  //           text: 'Sim',
+  //           handler: () => {
+  //             this.disableButton = true;
+  //             this.utils.presentSuccessToast("Lista finalizada com sucesso!");
+  //               setTimeout(() => {
+  //                 this.navCtrl.pop();
+  //               }, 1500);
+  //           }
+  //         },
+  //         {
+  //           text: 'Não',
+  //           cssClass: 'cancelButton',
+  //           handler: () => {
+  //             // console.log('Não finalizar.');
+  //           }
+  //         }
+  //       ]
+  //     });
+  //     confirm.present();
+  //   }
 
-    else {
-      this.disableButton = true;
-      setTimeout(() => {
-        this.navCtrl.pop();
-      }, 1500);
-    }
-    
-  }
-
-  addProduto() {
-    this.navCtrl.push(NovoProdutoPage);
-  }
+  //   else {
+  //     this.disableButton = true;
+  //     setTimeout(() => {
+  //       this.navCtrl.pop();
+  //     }, 1500);
+  //   }  
+  // }
 
 }
