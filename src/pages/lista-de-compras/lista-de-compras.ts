@@ -63,6 +63,10 @@ export class ListaDeComprasPage {
     });
   }
 
+  apagarLista(lista, i) {
+    console.log(lista);
+    lista.produtos.splice(i, 1);
+  }
 
   addLista() {
     this.navCtrl.push(NovaListaPage);

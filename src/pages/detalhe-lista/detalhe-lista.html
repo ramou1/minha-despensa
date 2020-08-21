@@ -24,14 +24,14 @@
         <ion-label> {{nota.nome_produto}}</ion-label>
         <ion-note item-end class="valor">{{nota.valor_unitario | currency:'BRL'}}</ion-note>
         <ion-note item-end>
-          <button ion-button icon-only (click)="removerProduto(nota)" class="remove-button">
+          <button ion-button icon-only (click)="removerProduto(nota, i)" class="remove-button">
             <ion-icon color="dark" name="md-remove"></ion-icon>
           </button>
         </ion-note>
       </ion-item>
     </div>
 
-    <ion-item text-wrap class="total">
+    <ion-item text-wrap class="total" *ngIf="notaEscolhida.produtos.length > 0">
       <ion-note item-start> TOTAL </ion-note>
       <ion-note item-end> {{total | currency:'BRL'}} </ion-note>
     </ion-item>

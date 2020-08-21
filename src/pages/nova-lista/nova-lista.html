@@ -25,14 +25,18 @@
 
     <div *ngFor="let produto of produtos_adicionados; index as i">
       <ion-item text-wrap>
-        <!-- <ion-note item-start class="numero"> 0{{i+1}}</ion-note> -->
         <ion-checkbox color="dark"></ion-checkbox>
         <ion-label>{{produto.nome_produto}}</ion-label>
         <ion-note item-end class="valor">{{produto.valor_unitario | currency:'BRL'}} </ion-note>
+        <ion-note item-end>
+          <button ion-button icon-only (click)="removerProduto(produto, i)" class="remove-button">
+            <ion-icon color="dark" name="md-remove"></ion-icon>
+          </button>
+        </ion-note>
       </ion-item>
     </div>
 
-    <ion-item text-wrap class="total">
+    <ion-item text-wrap class="total" *ngIf="produtos_adicionados.length > 0">
       <ion-note item-start> TOTAL </ion-note>
       <ion-note item-end> {{total | currency:'BRL'}} </ion-note>
     </ion-item>
@@ -40,7 +44,7 @@
   </ion-list>
 
   <ion-fab bottom right>
-    <button ion-fab clear (click)="salvar()" class="style-fab-button" [disabled]="disableButton || lista.descricao.length < 2">
+    <button ion-fab clear (click)="salvar()" class="style-fab-button" [disabled]="disableButton || produtos_adicionados.length < 2">
       <ion-icon color="dark" name="md-checkmark"></ion-icon>
     </button>
   </ion-fab>

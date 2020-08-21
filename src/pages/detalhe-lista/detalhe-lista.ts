@@ -49,29 +49,16 @@ export class DetalheListaPage {
   addProduto() {
     var dados: any = {nome_produto: this.produto.nome, valor_unitario: this.produto.valor };
     this.notaEscolhida.produtos.push(dados);
+    this.total += parseInt(this.produto.valor);
 
     this.produto.nome = "";
     this.produto.valor = "";
-
-    // this.loading = this.loadingCtrl.create({
-    //   // content: 'Carregando...',
-    // });
-
-    // this.loading.present().then(() => {
-
-    //   this.api.criarEstoque(this.produto.qtd, this.idarmazem, this.idproduto, this.produto.cliente, this.idmedida).then((result: any) => {
-    //     this.loading.dismiss().then(() => {
-    //     });
-    //   }).catch((error: any) => {
-    //     console.log("Erro ao cadastrar!", error.message);
-    //     this.loading.dismiss();
-    //     this.utils.presentErrorToast("Erro ao cadastrar!");
-    //   });
-    // });
   }
 
-  removerProduto(nota) {
+  removerProduto(nota, i) {
     console.log("Remover: ", nota);
+    this.total -= parseInt(nota.valor_unitario);
+    this.notaEscolhida.produtos.splice(i, 1);
   }
 
   // finalizar() {

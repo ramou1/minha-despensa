@@ -64,7 +64,7 @@
     </ion-list>
 
     <ion-list *ngSwitchCase="'feitas'" no-lines>
-      <ion-card *ngFor="let lista of listas_finalizadas" (click)="abrirLista(lista)">
+      <ion-card *ngFor="let lista of listas_finalizadas; index as i" (click)="abrirLista(lista)">
 
         <ion-card-header>
           <ion-grid>
@@ -83,6 +83,13 @@
           <ion-col class="conteudo">
             <span *ngFor="let produto of lista.produtos" class="produtos finalizado">{{produto.nome_produto}}, </span>
           </ion-col>
+
+          <ion-note item-end>
+            <button ion-button clear icon-only (click)="apagarLista(lista, i)">
+              <ion-icon color="dark" name="trash"></ion-icon>
+            </button>
+
+        </ion-note>
         </ion-card-content>
 
       </ion-card>
