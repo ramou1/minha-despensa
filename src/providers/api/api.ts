@@ -65,10 +65,10 @@ export class ApiProvider {
   ]
 
   public estabelecimentos: any = [
-    {nome_estabelecimento: "Mercado Extra", imagem: null, endereco: "Rua Adão Mariano Gomes, 234", distancia: 3.1}, 
-    {nome_estabelecimento: "Mercado Carrefour", imagem: null, endereco: "Travessa Zilma Martins, 463", distancia: 4.3}, 
-    {nome_estabelecimento: "Mercado BIG", imagem: null, endereco: "Rua Antônio M. Arruda, 276", distancia: 1.61}, 
-    {nome_estabelecimento: "Mercado Tenda", imagem: null, endereco: "Rua Dom Pedro II, 1609", distancia: 6.2}
+    {nome_estabelecimento: "Mercado Extra", imagem: null, endereco: "Rua Adão Mariano Gomes, 234", lat: -23.5812338, lng: -48.0273496, distancia: 3.1}, 
+    {nome_estabelecimento: "Mercado Carrefour", imagem: null, endereco: "Travessa Zilma Martins, 463", lat: -27.6715824, lng: -48.6573569, distancia: 4.3}, 
+    {nome_estabelecimento: "Mercado BIG", imagem: null, endereco: "Rua Antônio M. Arruda, 276", lat: -23.7010654, lng: -46.4077907, distancia: 1.61},  
+    {nome_estabelecimento: "Mercado Tenda", imagem: null, endereco: "Rua Dom Pedro II, 1609", lat: -23.3036428, lng: -45.9779911, distancia: 6.2} 
   ]
 
   // public produtos_gastos: any = {

@@ -1,5 +1,7 @@
 {
   "name": "minha-despensa",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular"
 }

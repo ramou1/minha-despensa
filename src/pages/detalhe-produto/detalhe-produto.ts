@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ApiProvider } from '../../providers/api/api';
+import { InAppBrowser } from '@ionic-native/in-app-browser';
 
 /**
  * Generated class for the DetalheProdutoPage page.
@@ -16,7 +17,7 @@ import { ApiProvider } from '../../providers/api/api';
 })
 export class DetalheProdutoPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public api: ApiProvider) {
+  constructor(public navCtrl: NavController, public iab: InAppBrowser, public navParams: NavParams, public api: ApiProvider) {
   }
 
   produtoEscolhido: any = this.navParams.get('produto');
@@ -37,6 +38,8 @@ export class DetalheProdutoPage {
   }
 
   abrirMapa(estabelecimento) {
+    const browser = this.iab.create("http://maps.google.com/maps?q="+estabelecimento.lat+","+estabelecimento.lng);
+    browser.show();
     console.log("Abrir mapa da localização: ", estabelecimento.endereco);
   }
 
