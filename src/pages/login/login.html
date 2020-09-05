@@ -16,18 +16,9 @@
       </ion-item>
 
       <div text-center>
-        <button ion-button secondary class="style-button" (click)="fazerLogin()" full>Login</button>
-        <!-- <button ion-button secondary class="style-button" (click)="fazerLogin()" full [disabled]="user.email < 5 || user.senha.length < 3">Login</button> -->
+        <button ion-button secondary class="style-button" (click)="fazerLogin()" full [disabled]="user.email < 5 || user.senha.length < 3">Login</button>
+        <button ion-button secondary class="style-button secondButton" (click)="entrarSemConta()" full>Entrar sem conta</button>
       </div>
-
-      <!-- <div text-center>
-        <button ion-button secondary class="style-button cancelButton" (click)="assinar()" full>Assinar</button>
-      </div>
-
-      <div text-center>
-        <button ion-button secondary class="style-button cancelButton" (click)="verDemo()" full>Ver Demo</button>
-      </div> -->
-
 
     </form>
 

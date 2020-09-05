@@ -103,11 +103,12 @@ ion-icon {
     border-radius: 20px;   
 }
 
-//classe do botão de cancelar com design diferente
-.cancelButton {
-    background-image: -webkit-gradient(linear, left top, right top, from(#F2EFEF), to(#F2EFEF)) !important;
+//classe do botão de entrar sem conta com design diferente
+.secondButton {
+    background-image: -webkit-gradient(linear, left top, right top, from(#fff), to(#fff)) !important;
     color: map-get($colors, primary) !important;
-    border: 1px solid map-get($colors, primary);
+    border: 2px solid map-get($colors, primary);
+    box-shadow: 0 0 black !important;
     font-weight: 500 !important;
     margin-top: 15px !important;
 }

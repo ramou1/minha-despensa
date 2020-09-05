@@ -48,7 +48,6 @@ export class LoginPage {
 
 
   fazerLogin() {
-    this.navCtrl.setRoot(TabsPage);
 
     // this.loading = this.loadingCtrl.create({ 
     //   // content: 'Carregando...',
@@ -88,6 +87,10 @@ export class LoginPage {
     //     });
     //   });
     // });
+  }
+
+  entrarSemConta() {
+    this.navCtrl.setRoot(TabsPage);
   }
 
   cadastrar() {
