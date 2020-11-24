@@ -1,15 +1,12 @@
-# Spotify 
+# Minha Despensa 
 
-Clone da versão Desktop do Spotify desenvolvido na versão 10.0.4 do Angular.
+App de 
 
-## O que falta
-:herb: <del>Criar modal de Nova Playlist</del> <br />
-:herb: Finalizar página Navegar <br />
-:herb: Finalizar página Feito para você <br />
-:herb: Finalizar página Tocados recentementes <br />
-:herb: Finalizar página Álbuns <br />
-:herb: Finalizar página Artistas <br />
-:herb: Finalizar página Podcasts <br />
+## O que o app faz?
+<!-- :herb: <del>Criar modal de Nova Playlist</del> <br /> -->
+:paperclip: - Crie sua lista de compras a fazer e visualize todas as compras já feitas; <br />
+:paperclip: - Saiba em quais mercados encontrar produtos específicos; <br />
+:paperclip: - Confira ofertas de produtos mais próximos e favorite as que você possui interesse.
 
 ## Prints 
 
