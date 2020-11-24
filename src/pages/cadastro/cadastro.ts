@@ -31,13 +31,14 @@ export class CadastroPage {
 
   registrar() {
     this.navCtrl.setRoot(TabsPage);
+    console.log("Dados cadastrados: ", this.user);
 
     // this.loading = this.loadingCtrl.create({
     //   content: 'Carregando...',
     // });
 
     // this.loading.present().then(() => {
-    //   this.api.criarConta(this.user.cep, this.user.nome, this.user.cnpj, this.user.email, this.user.senha, this.user.cadpro).then((result: any) => {
+    //   this.api.criarConta(this.user.nome, this.user.email, this.user.senha, this.user.confirmasenha).then((result: any) => {
     //     this.loading.dismiss().then(() => {
 
     //       if (!result.statusCode) {

@@ -21,10 +21,10 @@ export class NovaListaPage {
   }
 
   lista: any = { id: '', descricao: '', produtos: [] };
-  produto: any = {nome: '', valor: '' };
+  produto: any = {nome: '', valor: 0 };
   produtos_adicionados: any = this.api.produtos_adicionados;
   disableButton: boolean = false;
-  total: number = 0;
+  total: number = 0.0;
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad NovaListaPage');
@@ -58,7 +58,7 @@ export class NovaListaPage {
   addProduto() {
     var dados: any = {nome_produto: this.produto.nome, valor_unitario: this.produto.valor };
     this.produtos_adicionados.push(dados);
-    this.total += parseInt(this.produto.valor);
+    this.total += parseFloat(this.produto.valor);
 
     this.produto.nome = "";
     this.produto.valor = "";
@@ -66,7 +66,7 @@ export class NovaListaPage {
 
   removerProduto(produto, i) {
     console.log("Remover produto: ", produto);
-    this.total -= parseInt(produto.valor_unitario);
+    this.total -= parseFloat(produto.valor_unitario);
     this.produtos_adicionados.splice(i, 1);
   }
 

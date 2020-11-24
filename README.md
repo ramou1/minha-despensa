@@ -1,12 +1,11 @@
 # Minha Despensa 
-
-App de 
+Aplicativo de organização e criação de lista de compras.
 
 ## O que o app faz?
 <!-- :herb: <del>Criar modal de Nova Playlist</del> <br /> -->
-:paperclip: - Crie sua lista de compras a fazer e visualize todas as compras já feitas; <br />
-:paperclip: - Saiba em quais mercados encontrar produtos específicos; <br />
-:paperclip: - Confira ofertas de produtos mais próximos e favorite as que você possui interesse.
+:memo: Crie sua lista de compras a fazer e visualize todas as compras já feitas; <br />
+:memo: Saiba em quais mercados encontrar produtos específicos; <br />
+:memo: Confira ofertas de produtos mais próximos e favorite as que você possui interesse.
 
 ## Prints 
 
