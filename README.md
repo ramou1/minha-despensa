@@ -8,6 +8,6 @@ Aplicativo de organização e criação de lista de compras.
 :memo: Confira ofertas de produtos mais próximos e favorite as que você possui interesse.
 
 ## Prints 
-(https://raw.githubusercontent.com/ramou1/minha-despensa/master/src/assets/imgs/logo.png)
+![print](https://raw.githubusercontent.com/ramou1/minha-despensa/master/src/assets/imgs/logo.png)
 
 ## Link para acessar
