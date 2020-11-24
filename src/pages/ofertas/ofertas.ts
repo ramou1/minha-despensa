@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { InAppBrowser } from '@ionic-native/in-app-browser';
 import { IonicPage, NavController, NavParams, Loading, AlertController, LoadingController } from 'ionic-angular';
 import { ApiProvider } from '../../providers/api/api';
 import { UtilsProvider } from '../../providers/utils/utils';
@@ -20,7 +21,7 @@ export class OfertasPage {
   produtos: any;
   loading: Loading;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController, public alertCtrl: AlertController, public api: ApiProvider, public utils: UtilsProvider) {
+  constructor(public navCtrl: NavController, public iab: InAppBrowser, public navParams: NavParams, public loadingCtrl: LoadingController, public alertCtrl: AlertController, public api: ApiProvider, public utils: UtilsProvider) {
   }
 
   ionViewDidLoad() {
@@ -105,11 +106,13 @@ export class OfertasPage {
         }
       ]
     });
-    confirm.present();
+    confirm.present(); 
   }
 
   abrirMapa(oferta) {
     console.log("Abrir mapa da localização: ", oferta.localizacao);
+    const browser = this.iab.create("http://maps.google.com/maps?q="+oferta.lat+","+oferta.lng);
+    browser.show();
   }
 
 }

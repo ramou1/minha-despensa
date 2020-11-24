@@ -21,7 +21,7 @@ export class NovaListaPage {
   }
 
   lista: any = { id: '', descricao: '', produtos: [] };
-  produto: any = {nome: '', valor: 0 };
+  produto: any = {nome: '', valor: '' };
   produtos_adicionados: any = this.api.produtos_adicionados;
   disableButton: boolean = false;
   total: number = 0.0;

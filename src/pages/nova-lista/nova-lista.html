@@ -25,7 +25,7 @@
 
     <div *ngFor="let produto of produtos_adicionados; index as i">
       <ion-item text-wrap>
-        <ion-checkbox color="dark"></ion-checkbox>
+        <!-- <ion-checkbox color="dark"></ion-checkbox> -->
         <ion-label>{{produto.nome_produto}}</ion-label>
         <ion-note item-end class="valor">{{produto.valor_unitario | currency:'BRL'}} </ion-note>
         <ion-note item-end>
@@ -64,7 +64,7 @@
         </ion-col>
         <ion-col col-2 class="form-input">
           <button ion-button clear icon-only (click)="addProduto()">
-            <ion-icon color="dark" name="md-send"></ion-icon>
+            <ion-icon color="dark" name="md-add"></ion-icon>
           </button>
         </ion-col>
       </ion-row>

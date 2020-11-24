@@ -7,6 +7,11 @@ Aplicativo de organização e criação de lista de compras.
 :memo: Saiba em quais mercados encontrar produtos específicos; <br />
 :memo: Confira ofertas de produtos mais próximos e favorite as que você possui interesse.
 
+## O que fala
+:point_right: Fazer o cálculo de distância dos mercados na área de ofertas <br />
+:point_right: Filtrar pelo nome do produto, não da categoria
+
+
 ## Prints 
 ![print](https://raw.githubusercontent.com/ramou1/minha-despensa/master/src/assets/imgs/logo.png)
 
