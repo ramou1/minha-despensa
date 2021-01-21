@@ -1,8 +1,8 @@
 # Minha Despensa 
-Aplicativo desenvolvido em IONIC 3 para organização e criação de lista de compras.
+Aplicativo desenvolvido em IONIC 3 para criação e organização de lista de compras.
 
 ## Download
-Baixe a última versão apk do projeto [aqui.](https://github.com/ramou1/minha-despensa/raw/master/app-final.apk)
+Baixe a última versão apk do projeto [aqui.](https://github.com/ramou1/minha-despensa/raw/master/minha-despensa.apk)
 
 ## O que o app faz?
 <!-- :herb: <del>Criar modal de Nova Playlist</del> <br /> -->
