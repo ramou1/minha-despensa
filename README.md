@@ -2,7 +2,7 @@
 Aplicativo desenvolvido em IONIC 3 para organização e criação de lista de compras.
 
 ## Download
-Baixe a última versão apk do projeto [aqui.](https://raw.githubusercontent.com/ramou1/minha-despensa/main/app-final.apk)
+Baixe a última versão apk do projeto [aqui.](https://raw.githubusercontent.com/ramou1/minha-despensa/blob/master/app-final.apk)
 
 ## O que o app faz?
 <!-- :herb: <del>Criar modal de Nova Playlist</del> <br /> -->
